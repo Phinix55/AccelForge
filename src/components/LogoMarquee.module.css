@@ -1,0 +1,89 @@
+.marqueeContainer {
+    position: relative;
+    background-color: var(--color-white);
+    border-radius: 24px;
+    margin: 0 1rem 2rem 1rem;
+    /* Matches Hero gap */
+    padding: 2rem 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.marqueeTrack {
+    display: flex;
+    gap: 4rem;
+    animation: scroll 30s linear infinite;
+    white-space: nowrap;
+    padding-left: 4rem;
+    /* Initial offset */
+}
+
+.logoItem {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.logoItem:hover {
+    opacity: 1;
+}
+
+.logoText {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-gray-600);
+    font-family: var(--font-sans);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Pseudo-element for icon to make it look like a real logo */
+.logoText::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: currentColor;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Adjust based on duplication */
+    }
+}
+
+.fadeLeft,
+.fadeRight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.fadeLeft {
+    left: 0;
+    background: linear-gradient(to right, var(--color-white), transparent);
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+}
+
+.fadeRight {
+    right: 0;
+    background: linear-gradient(to left, var(--color-white), transparent);
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
