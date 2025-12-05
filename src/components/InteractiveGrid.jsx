@@ -29,13 +29,13 @@ const InteractiveGrid = () => {
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     
                     // Calculate opacity and glow based on distance from mouse
-                    let opacity = 0.03;
+                    let opacity = 0.025;
                     let lineWidth = 1;
                     
                     if (distance < glowRadius) {
                         const intensity = 1 - (distance / glowRadius);
-                        opacity = 0.03 + intensity * 0.1;
-                        lineWidth = 1 + intensity * 2;
+                        opacity = 0.025 + intensity * 0.05;
+                        lineWidth = 1 + intensity * 1.5;
                     } else {
                         ctx.shadowBlur = 0;
                     }
@@ -58,13 +58,13 @@ const InteractiveGrid = () => {
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     
                     // Calculate opacity and glow based on distance from mouse
-                    let opacity = 0.03;
+                    let opacity = 0.025;
                     let lineWidth = 1;
                     
                     if (distance < glowRadius) {
                         const intensity = 1 - (distance / glowRadius);
-                        opacity = 0.03 + intensity * 0.1;
-                        lineWidth = 1 + intensity * 2;
+                        opacity = 0.025 + intensity * 0.05;
+                        lineWidth = 1 + intensity * 1.5;
                     } else {
                         ctx.shadowBlur = 0;
                     }

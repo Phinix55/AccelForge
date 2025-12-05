@@ -4,7 +4,7 @@ import ScrollReveal from './ScrollReveal';
 
 const HowItWorks = () => {
     return (
-        <section className="bg-accent-primary py-16 px-8 relative overflow-hidden bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-size-[60px_60px] text-white text-center max-[768px]:py-10 max-[768px]:px-4">
+        <section className="bg-accent-primary py-16 px-8 mb-4 relative overflow-hidden bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-size-[60px_60px] text-white text-center max-[768px]:py-10 max-[768px]:px-4">
             <div className="max-w-[1000px] mx-auto mb-16 max-[768px]:mb-8">
                 <ScrollReveal>
                     <h2 className="font-serif text-[3rem] font-medium mb-6 tracking-[-0.02em] leading-[1.2] max-[1024px]:text-[2.5rem] max-[1024px]:mb-1 max-[768px]:text-[2.2rem] max-[768px]:mb-3 max-[768px]:leading-[1.2]">How We Build Revenue Systems That Scale</h2>
@@ -48,12 +48,9 @@ const HowItWorks = () => {
 
             <div className="max-w-[600px] mx-auto">
                 <ScrollReveal delay={0.5}>
-                    <p className="mb-8 opacity-90 leading-[1.6] text-[1.05rem] max-[1024px]:text-[0.9rem] max-[1024px]:px-4 max-[768px]:mb-6">
+                    <p className="opacity-90 leading-[1.6] text-[1.05rem] max-[1024px]:text-[0.9rem] max-[1024px]:px-4 max-[768px]:mb-6">
                         Streamline your growth with AccelForge. Save time, reduce complexity, and take control with ease.
                     </p>
-                    <button className="bg-white text-text-primary border-none py-3 px-10 rounded-full font-bold text-[1rem] cursor-pointer inline-flex items-center gap-2 transition-all duration-200 ease-out shadow-[0_4px_15px_rgba(0,0,0,0.1)] hover:scale-105 hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)]">
-                        Free trial <ArrowRight size={18} />
-                    </button>
                 </ScrollReveal>
             </div>
         </section>

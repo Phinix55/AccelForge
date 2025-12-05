@@ -1,10 +1,12 @@
+import { div } from 'framer-motion/client';
 import React from 'react';
+import logo2 from '../assets/logo2.png';
 
 
 const Footer = () => {
     return (
-        <section className="p-0 mb-8">
-            <div className="bg-[#0c110f] rounded-3xl pt-16 px-8 pb-0 mx-4 mb-8 text-white relative overflow-hidden min-h-[600px] flex flex-col max-[768px]:pt-10 max-[768px]:px-5 max-[768px]:pb-0 max-[768px]:min-h-0">
+        <div>
+            <section className="bg-[#0c110f] pt-16 px-14 text-white relative overflow-hidden min-h-[600px] flex flex-col max-[768px]:pt-10 max-[768px]:px-5 max-[768px]:pb-0 max-[768px]:min-h-0">
                 {/* Subscribe Section */}
                 <div className="text-center max-w-[800px] mx-auto mb-16 relative z-[2] max-[768px]:mb-8 max-[768px]:text-left">
                     <h2 className="font-serif text-[3rem] font-normal leading-[1.2] mb-4 max-[768px]:text-[1.8rem] max-[768px]:text-center max-[768px]:mb-3">
@@ -32,12 +34,7 @@ const Footer = () => {
                 <div className="flex justify-between mt-auto pb-48 relative z-[2] max-[768px]:flex-col max-[768px]:gap-10 max-[768px]:pb-32 max-[768px]:text-left">
                     <div className="max-w-[300px]">
                         <div className="flex items-center gap-2 text-[1.5rem] font-semibold text-white mb-4">
-                            <div className="flex gap-[2px]">
-                                <div className="w-[6px] h-[20px] bg-accent-light rounded-[4px] -skew-x-[15deg]" style={{ opacity: 0.6 }}></div>
-                                <div className="w-[6px] h-[20px] bg-accent-light rounded-[4px] -skew-x-[15deg]" style={{ opacity: 0.8 }}></div>
-                                <div className="w-[6px] h-[20px] bg-accent-light rounded-[4px] -skew-x-[15deg]"></div>
-                            </div>
-                            AccelForge
+                            <img src={logo2} alt="Company Logo" className="w-40 h-auto object-contain" />
                         </div>
                         <p className="text-gray-400 text-[0.9rem] leading-[1.5]">
                             Make your complicated <br />
@@ -70,11 +67,15 @@ const Footer = () => {
                 </div>
 
                 {/* Watermark */}
-                <div className="absolute -bottom-[5%] left-1/2 -translate-x-1/2 font-sans text-[18vw] font-bold text-white/5 whitespace-nowrap pointer-events-none z-[1] leading-none max-[768px]:text-[22vw] max-[768px]:bottom-0">
+                <div className="absolute -bottom-[10%] left-1/2 -translate-x-1/2 font-sans text-[18vw] font-bold text-white/5 whitespace-nowrap pointer-events-none z-[1] leading-none max-[768px]:text-[22vw] max-[768px]:bottom-0">
                     AccelForge
                 </div>
-            </div>
+
         </section>
+                <div className='text-white text-center bg-black py-4'>
+                    Copyright © 2025 accelforge.com. All Rights Reserved
+                </div>
+        </div>
     );
 };
 

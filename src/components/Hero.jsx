@@ -6,11 +6,15 @@ import InteractiveGrid from './InteractiveGrid';
 
 const Hero = () => {
     return (
-            <section className="relative flex flex-col items-center bg-accent-primary py-16 px-8 overflow-hidden text-white max-[768px]:py-10 max-[768px]:px-4">
+            <section className="relative flex flex-col items-center bg-accent-primary py-28 pb-20 overflow-hidden text-white max-[768px]:py-10 max-[768px]:px-4">
+                {/* Premium Gradient Background */}
+                <div className="absolute inset-0 bg-[linear-gradient(135deg,#3B5998_0%,#001a57_50%,#0f2044_100%)] opacity-90 z-0"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(59,89,152,0.4)_0%,transparent_70%)] z-0"></div>
+                
                 <InteractiveGrid />
                 {/* <ScrollReveal delay={0.2}> */}
-                    <h1 className="relative z-10 font-serif text-6xl text-center leading-[1.3] mb-10 max-w-[650px] max-[1200px]:text-[3rem] max-[1024px]:text-[3rem] max-[1024px]:mb-4 max-[768px]:text-[2.2rem]">
-                        Enterprise Growth that Moves Faster
+                    <h1 className="relative z-10 font-serif text-7xl text-center leading-[1.3] mb-10 max-w-[650px] max-[1200px]:text-[3rem] max-[1024px]:text-[3rem] max-[1024px]:mb-4 max-[768px]:text-[2.2rem]">
+                        AccelForge <br/> Enterprise <span className='text-yellow-500'>Growth</span> that Moves Faster
                     </h1>
                 {/* </ScrollReveal> */}
                 {/* <ScrollReveal delay={0.3}> */}
@@ -21,10 +25,7 @@ const Hero = () => {
                 {/* <ScrollReveal delay={0.4}> */}
                     <div className="relative z-10 flex gap-4 mb-16 max-[1024px]:flex-col max-[1024px]:w-full">
                         <button className="bg-white text-[#001855] border-none py-4 px-8 rounded-full text-[1rem] font-semibold flex items-center justify-center gap-2 cursor-pointer transition-opacity duration-200 hover:opacity-90 max-[1024px]:w-full">
-                            Download app <ArrowRight size={20} />
-                        </button>
-                        <button className="bg-transparent text-white border border-white py-4 px-8 rounded-full text-[1rem] font-semibold cursor-pointer transition-all duration-200 hover:bg-white hover:text-[#001855] max-[1024px]:w-full">
-                            Free trial
+                            Let's Connect <ArrowRight size={20} />
                         </button>
                     </div>
                 {/* </ScrollReveal> */}
