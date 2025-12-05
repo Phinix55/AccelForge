@@ -18,21 +18,22 @@ const Header = () => {
 
     return (
         <>
-            <header className="flex items-center justify-between px-8 py-4 bg-white rounded-2xl mx-8 my-6 shadow-[0_2px_4px_rgba(0,0,0,0.02)] relative z-50 max-[900px]:m-4 max-[900px]:p-6">
+        <div className='bg-accent-primary w-full flex justify-center sticky top-0 z-50'>
+            <header className="container flex items-center justify-between px-4 py-4">
                 <div className="flex items-center gap-3 font-sans font-bold text-2xl text-text-primary">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-accent-primary -rotate-15">
-                        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M3 6h18M3 12h18M3 18h18" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                    <span>AccelForge</span>
+                    <span className='text-white'>AccelForge</span>
                 </div>
 
                 {/* Desktop Nav */}
-                <nav className="flex gap-10 max-[900px]:hidden">
+                <nav className="flex gap-15 max-[900px]:hidden">
                     {navLinks.map((link) => (
                         <a
                             key={link.name}
                             href={link.href}
-                            className="no-underline text-gray-600 font-medium text-base transition-colors duration-200 hover:text-text-primary"
+                            className="no-underline text-gray-400 font-medium text-lg transition-colors duration-200 hover:text-text-primary"
                         >
                             {link.name}
                         </a>
@@ -40,7 +41,7 @@ const Header = () => {
                 </nav>
 
                 <div className="flex items-center gap-4 max-[900px]:hidden">
-                    <button className="bg-accent-primary text-white border-none py-3 px-8 rounded-full cursor-pointer font-semibold transition-colors duration-200 text-[0.95rem] hover:bg-[#00123d]">
+                    <button className="bg-white text-black text-lg border-none py-4 px-8 rounded-full cursor-pointer font-semibold transition-colors duration-200 hover:bg-gray-200">
                         Contact us
                     </button>
                 </div>
@@ -51,6 +52,7 @@ const Header = () => {
                     </button>
                 </div>
             </header>
+            </div>
 
             {/* Mobile Drawer */}
             <AnimatePresence>

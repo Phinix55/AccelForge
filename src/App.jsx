@@ -13,14 +13,11 @@ import ScrollReveal from './components/ScrollReveal';
 
 function App() {
   return (
-    <div className="app">
+    <div>
       <Header />
       <main>
         <ScrollReveal>
           <Hero />
-        </ScrollReveal>
-        <ScrollReveal delay={0.2}>
-          <LogoMarquee />
         </ScrollReveal>
         <ScrollReveal>
           <About />
