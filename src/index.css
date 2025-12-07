@@ -8,8 +8,8 @@ html {
 @theme {
     --color-bg-primary: #f8f9fa;
     --color-text-primary: #1a1a1a;
-    --color-accent-primary: #001a57;
-    --color-accent-light: #e6e9f0;
+    --color-accent-primary: #1a1a1a;
+    --color-accent-light: #e8e8e8;
 
     --font-serif: "Playfair Display", serif;
     --font-sans: "Inter", sans-serif;

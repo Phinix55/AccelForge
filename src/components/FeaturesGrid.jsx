@@ -41,10 +41,10 @@ const FeaturesGrid = () => {
                     return (
                         <div
                             key={index}
-                            className="bg-[#f8f9fb] rounded-2xl border-2 border-[#c5d5ed] p-8 flex flex-col transition-all duration-300 cursor-default hover:-translate-y-2 hover:shadow-xl hover:border-[#a0b5d8] w-full md:w-[calc(33.333%-1rem)] md:max-w-[400px]"
+                            className="bg-bg-primary rounded-2xl border-2 border-[#d0d0d0] p-8 flex flex-col transition-all duration-300 cursor-default hover:-translate-y-2 hover:shadow-xl hover:border-[#a0a0a0] w-full md:w-[calc(33.333%-1rem)] md:max-w-[400px]"
                         >
                             <div className="mb-6">
-                                <Icon size={40} className="text-[#5b8fd9]" strokeWidth={1.5} />
+                                <Icon size={40} className="text-[#3a3a3a]" strokeWidth={1.5} />
                             </div>
                             <h3 className="text-2xl font-semibold mb-4 text-text-primary">
                                 {feature.title}
@@ -52,7 +52,7 @@ const FeaturesGrid = () => {
                             <p className="text-[#6b7280] leading-relaxed mb-6 grow">
                                 {feature.description}
                             </p>
-                            <a href="#" className="inline-flex items-center gap-2 text-[#3b7dd6] font-medium hover:gap-3 transition-all">
+                            <a href="#" className="inline-flex items-center gap-2 text-[#1a1a1a] font-medium hover:gap-3 transition-all">
                                 Learn More <ArrowRight size={16} />
                             </a>
                         </div>

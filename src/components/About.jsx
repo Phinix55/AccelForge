@@ -7,7 +7,7 @@ const About = () => {
             <div className="max-w-[1200px] mx-auto mb-24 flex justify-between items-start gap-16 max-[1024px]:flex-col max-[1024px]:items-center max-[1024px]:text-center max-[1024px]:gap-8 max-[1024px]:mb-16 max-[768px]:mb-6 max-[768px]:items-start max-[768px]:text-left">
                 <div className="shrink-0">
                     <ScrollReveal>
-                        <span className="bg-[#e6f4f1] text-accent-primary py-3 px-6 rounded-full font-semibold text-[0.95rem] inline-block">About Us</span>
+                        <span className="bg-[#e8e8e8] text-accent-primary py-3 px-6 rounded-full font-semibold text-[0.95rem] inline-block">About Us</span>
                     </ScrollReveal>
                 </div>
                 <div className="max-w-[800px]">

@@ -21,7 +21,7 @@ const CreditCard = ({ className }) => (
             <div className="text-[0.85rem] text-gray-500 mb-2 font-medium">Card Number</div>
             <div className="font-mono text-[1.5rem] text-gray-700 tracking-[2px] font-semibold">1234 0000 6723 0088</div>
         </div>
-        <div className="absolute -bottom-[60px] -right-[60px] w-[220px] h-[220px] bg-[#eefbf8] rounded-full z-1 before:content-[''] before:absolute before:-top-10 before:left-10 before:w-[220px] before:h-[220px] before:bg-[#eefbf8] before:rounded-full before:opacity-60"></div>
+        <div className="absolute -bottom-[60px] -right-[60px] w-[220px] h-[220px] bg-[#e8e8e8] rounded-full z-1 before:content-[''] before:absolute before:-top-10 before:left-10 before:w-[220px] before:h-[220px] before:bg-[#e8e8e8] before:rounded-full before:opacity-60"></div>
     </div>
 );
 
