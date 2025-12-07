@@ -12,7 +12,7 @@ const LOGOS = [
 
 const LogoMarquee = () => {
     return (
-        <div className="mb-16 py-8 overflow-hidden flex items-center">
+        <div className="mb-16 py-8 max-[1024px]:mb-8 overflow-hidden flex items-center">
             <div className="flex gap-16 animate-scroll whitespace-nowrap pl-16">
                 {/* Render logos twice for seamless loop */}
                 {[...LOGOS, ...LOGOS, ...LOGOS].map((logo, index) => (

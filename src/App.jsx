@@ -7,7 +7,6 @@ import FeaturesGrid from './components/FeaturesGrid';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import CTASection from './components/CTASection';
-import LogoMarquee from './components/LogoMarquee';
 import Footer from './components/Footer';
 import ScrollReveal from './components/ScrollReveal';
 
@@ -19,24 +18,30 @@ function App() {
         <ScrollReveal>
           <Hero />
         </ScrollReveal>
-        <ScrollReveal>
-          <About />
-        </ScrollReveal>
+        <div id="about">
+          <ScrollReveal>
+            <About />
+          </ScrollReveal>
+        </div>
         <ScrollReveal>
           <HowItWorks />
         </ScrollReveal>
-        <ScrollReveal>
-          <FeaturesGrid />
-        </ScrollReveal>
+        <div id="services">
+          <ScrollReveal>
+            <FeaturesGrid />
+          </ScrollReveal>
+        </div>
         <ScrollReveal>
           <Testimonials />
         </ScrollReveal>
         <ScrollReveal>
           <CTASection />
         </ScrollReveal>
-        <ScrollReveal>
-          <FAQ />
-        </ScrollReveal>
+        <div id="faq">
+          <ScrollReveal>
+            <FAQ />
+          </ScrollReveal>
+        </div>
       </main>
       <ScrollReveal>
         <Footer />

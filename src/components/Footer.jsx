@@ -1,5 +1,3 @@
-import { div } from 'framer-motion/client';
-import React from 'react';
 import logo2 from '../assets/logo2.png';
 
 
@@ -8,7 +6,7 @@ const Footer = () => {
         <div>
             <section className="bg-[#0c110f] pt-16 px-14 text-white relative overflow-hidden min-h-[600px] flex flex-col max-[768px]:pt-10 max-[768px]:px-5 max-[768px]:pb-0 max-[768px]:min-h-0">
                 {/* Subscribe Section */}
-                <div className="text-center max-w-[800px] mx-auto mb-16 relative z-[2] max-[768px]:mb-8 max-[768px]:text-left">
+                <div className="text-center max-w-[800px] mx-auto mb-16 relative z-2 max-[768px]:mb-8 max-[768px]:text-left">
                     <h2 className="font-serif text-[3rem] font-normal leading-[1.2] mb-4 max-[768px]:text-[1.8rem] max-[768px]:text-center max-[768px]:mb-3">
                         Stay Ahead with Revenue <br />
                         <span className="font-serif italic">Growth Insights</span>
@@ -31,12 +29,10 @@ const Footer = () => {
                 <div className="h-px bg-white/10 w-full mb-16 max-[768px]:mb-12"></div>
 
                 {/* Main Content */}
-                <div className="flex justify-between mt-auto pb-48 relative z-[2] max-[768px]:flex-col max-[768px]:gap-10 max-[768px]:pb-32 max-[768px]:text-left">
+                <div className="flex justify-between mt-auto pb-48 relative z-2 max-[768px]:flex-col max-[768px]:gap-10 max-[768px]:pb-32 max-[768px]:text-left">
                     <div className="max-w-[300px]">
-                        <div className="flex items-center gap-2 text-[1.5rem] font-semibold text-white mb-4">
-                            <img src={logo2} alt="Company Logo" className="w-40 h-auto object-contain" />
-                        </div>
-                        <p className="text-gray-400 text-[0.9rem] leading-[1.5]">
+                        <img src={logo2} alt="Company Logo" className="w-40 h-auto object-contain mb-2" />
+                        <p className="text-gray-400 text-[0.9rem] leading-normal">
                             Make your complicated <br />
                             finance more simple
                         </p>
@@ -67,12 +63,12 @@ const Footer = () => {
                 </div>
 
                 {/* Watermark */}
-                <div className="absolute -bottom-[10%] left-1/2 -translate-x-1/2 font-sans text-[18vw] font-bold text-white/5 whitespace-nowrap pointer-events-none z-[1] leading-none max-[768px]:text-[22vw] max-[768px]:bottom-0">
+                <div className="absolute -bottom-45 left-1/2 -translate-x-1/2 font-sans text-[18vw] font-bold text-white/5 whitespace-nowrap pointer-events-none z-1 max-[768px]:-bottom-10">
                     AccelForge
                 </div>
 
         </section>
-                <div className='text-white text-center bg-black py-4'>
+                <div className='text-white text-center bg-black py-3'>
                     Copyright © 2025 accelforge.com. All Rights Reserved
                 </div>
         </div>

@@ -31,17 +31,17 @@ const About = () => {
                     <div className="text-[3.5rem] font-normal text-text-primary font-sans max-[768px]:text-[2rem]">2500+</div>
                     <div className="text-gray-400 text-[1rem] max-[768px]:text-[0.9rem]">Partners & customers</div>
                 </ScrollReveal>
-                <div className="w-px h-[80px] bg-gray-200 max-[768px]:hidden"></div>
+                <div className="w-px h-20 bg-gray-200 max-[768px]:hidden"></div>
                 <ScrollReveal delay={0.4} className="flex flex-col gap-2 text-center">
                     <div className="text-[3.5rem] font-normal text-text-primary font-sans max-[768px]:text-[2rem]">$2'259.56</div>
                     <div className="text-gray-400 text-[1rem] max-[768px]:text-[0.9rem]">Raise Invest in 2024</div>
                 </ScrollReveal>
-                <div className="w-px h-[80px] bg-gray-200 max-[768px]:hidden"></div>
+                <div className="w-px h-20 bg-gray-200 max-[768px]:hidden"></div>
                 <ScrollReveal delay={0.5} className="flex flex-col gap-2 text-center">
                     <div className="text-[3.5rem] font-normal text-text-primary font-sans max-[768px]:text-[2rem]">5.0</div>
                     <div className="text-gray-400 text-[1rem] max-[768px]:text-[0.9rem]">Custome review</div>
                 </ScrollReveal>
-                <div className="w-px h-[80px] bg-gray-200 max-[768px]:hidden"></div>
+                <div className="w-px h-20 bg-gray-200 max-[768px]:hidden"></div>
                 <ScrollReveal delay={0.6} className="flex flex-col gap-2 text-center">
                     <div className="text-[3.5rem] font-normal text-text-primary font-sans max-[768px]:text-[2rem]">205+</div>
                     <div className="text-gray-400 text-[1rem] max-[768px]:text-[0.9rem]">Produces</div>

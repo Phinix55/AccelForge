@@ -49,8 +49,8 @@ const Testimonials = () => {
                 </p>
             </div>
 
-            <div className="relative w-full overflow-hidden py-8 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-                <div className="flex gap-8 w-max animate-[scroll_40s_linear_infinite] hover:[animation-play-state:paused]">
+            <div className="relative w-full overflow-hidden py-8 mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+                <div className="flex gap-8 w-max animate-scroll hover:[animation-play-state:paused]">
                     {/* Render cards twice for seamless loop */}
                     {[...testimonialsData, ...testimonialsData].map((item, index) => (
                         <div key={`${item.id}-${index}`} className="bg-white border border-[#eee] rounded-3xl p-8 w-[350px] shrink-0 flex flex-col justify-between transition-all duration-300 ease-out cursor-default hover:scale-105 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:border-transparent hover:z-10 max-[768px]:w-full max-[768px]:max-w-[300px] max-[768px]:p-6">

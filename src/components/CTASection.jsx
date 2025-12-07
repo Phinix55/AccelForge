@@ -6,9 +6,7 @@ import logo1 from '../assets/logo1.png';
 const CreditCard = ({ className }) => (
     <div className={`w-[320px] h-[480px] bg-white rounded-3xl p-10 absolute shadow-[0_25px_50px_rgba(0,0,0,0.25)] flex flex-col justify-between overflow-hidden max-[1024px]:w-[260px] max-[1024px]:h-[400px] max-[1024px]:p-6 ${className}`}>
         <div className="flex justify-between items-start">
-            <div className="flex items-center gap-[0.8rem] font-bold text-[1.6rem] text-text-primary tracking-[-0.03em]">
                 <img src={logo1} alt="Company Logo" className="w-30 h-auto object-contain" />
-            </div>
             <div className="w-12 h-[58px] border-[1.5px] border-gray-200 rounded-[10px] flex flex-col justify-between p-1.5 bg-transparent">
                 <div className="h-px bg-gray-200 w-full"></div>
                 <div className="h-px bg-gray-200 w-full"></div>
@@ -29,9 +27,9 @@ const CreditCard = ({ className }) => (
 
 const CTASection = () => {
     return (
-            <section className="bg-accent-primary px-28 overflow-hidden flex justify-between items-center h-[450px] bg-[linear-gradient(rgba(255,255,255,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.09)_1px,transparent_1px)] bg-size-[60px_60px] max-[1024px]:flex-col max-[1024px]:px-5 max-[1024px]:py-10 max-[1024px]:text-left max-[1024px]:h-auto">
+            <section className="bg-accent-primary px-28 overflow-hidden flex justify-between items-center h-[450px] bg-[linear-gradient(rgba(255,255,255,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.09)_1px,transparent_1px)] bg-size-[60px_60px] max-[1024px]:flex-col max-[1024px]:px-5 max-[1024px]:pb-40 max-[1024px]:pt-10 max-[1024px]:h-auto">
                 <div className="flex-1 max-w-[550px] z-2 text-white max-[1024px]:mb-10 max-[1024px]:max-w-full max-[768px]:flex max-[768px]:flex-col">
-                    <h2 className="font-serif text-[3rem] font-medium mb-4 leading-[1.1] max-[1024px]:text-[2.2rem] max-[1024px]:text-center max-[1024px]:mb-3 max-[768px]:text-[1.6rem] max-[768px]:leading-[1.2] max-[768px]:mb-6 max-[768px]:text-center">
+                    <h2 className="font-serif text-[3rem] font-medium mb-4 leading-[1.1] max-[1024px]:text-[2.5rem] max-[1024px]:text-center max-[1024px]:mb-3 max-[768px]:text-[2.1rem] max-[768px]:leading-[1.2] max-[768px]:mb-6 max-[768px]:text-center">
                         Ready to Transform Your <br />
                         Financial <span className="italic font-serif font-normal">Management?</span>
                     </h2>
@@ -44,9 +42,9 @@ const CTASection = () => {
                 </div>
 
                 <div className="flex-1 relative h-full max-[1024px]:w-full max-[1024px]:h-[400px] max-[1024px]:justify-center">
-                    <div className="absolute -right-5 -top-5 w-[500px] h-[110%] flex items-center justify-center max-[1024px]:relative max-[1024px]:right-auto max-[1024px]:top-auto max-[1024px]:transform-none max-[1024px]:w-full max-[1024px]:justify-center max-[1024px]:mt-4">
-                        <CreditCard className="top-14 left-10 -rotate-15 z-1 opacity-100 brightness-[0.98] max-[1024px]:left-2.5 max-[1024px]:top-0" />
-                        <CreditCard className="top-26 left-40 -rotate-15 z-2 max-[1024px]:left-10 max-[1024px]:top-[30px]" />
+                    <div className="absolute -right-5 -top-5 w-[500px] h-[110%] flex items-center justify-center max-[1024px]:relative max-[1024px]:-right-15 max-[1024px]:top-auto max-[1024px]:transform-none max-[1024px]:w-full max-[1024px]:justify-center max-[1024px]:mt-4">
+                        <CreditCard className="top-15 left-10 -rotate-15 z-1 max-[1024px]:left-0 max-[1024px]:-top-3" />
+                        <CreditCard className="top-26 left-40 -rotate-15 z-2 max-[1024px]:left-20 max-[1024px]:top-8" />
                     </div>
                 </div>
         </section>

@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 @theme {
     --color-bg-primary: #f8f9fa;
     --color-text-primary: #1a1a1a;

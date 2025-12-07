@@ -19,37 +19,36 @@ const Header = () => {
 
     return (
         <>
-        <div className='bg-accent-primary w-full flex justify-center sticky top-0 z-50'>
-            <header className="container flex items-center justify-between px-4 py-4">
-                <div className="flex items-center gap-3 font-sans font-bold text-2xl text-text-primary">
+            <div className='bg-accent-primary w-full flex justify-center sticky top-0 z-50'>
+                <header className="container flex items-center justify-between max-[900px]:pr-4 py-3 max-[900px]:py-2">
                     <img src={logo2} alt="AccelForge Logo" className="w-32 h-auto" />
-                </div>
 
-                {/* Desktop Nav */}
-                <nav className="flex gap-15 max-[900px]:hidden">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            className="no-underline text-gray-400 font-medium text-lg transition-colors duration-200 hover:text-text-primary"
-                        >
-                            {link.name}
-                        </a>
-                    ))}
-                </nav>
+                    {/* Desktop Nav */}
+                    <nav className="flex gap-15 max-[900px]:hidden">
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                className="no-underline text-gray-400 font-medium text-lg transition-colors duration-200 hover:text-white"
+                            >
+                                {link.name}
+                            </a>
+                        ))}
+                    </nav>
 
-                <div className="flex items-center gap-4 max-[900px]:hidden">
-                    <button className="bg-white text-black text-lg border-none py-3 px-8 rounded-full cursor-pointer font-semibold transition-colors duration-200 hover:bg-gray-200">
+                    <button className="bg-white max-[900px]:hidden text-black text-lg border-2 border-white py-3 px-7 rounded-full cursor-pointer font-semibold transition-colors duration-200 hover:bg-accent-primary hover:text-white">
                         Contact us
                     </button>
-                </div>
 
-                <div className="hidden items-center gap-4 max-[900px]:flex">
-                    <button className="bg-accent-primary border-none flex items-center justify-center p-2 rounded-lg cursor-pointer z-60 text-white" onClick={toggleDrawer}>
-                        <Menu size={24} color="#ffffff" />
-                    </button>
-                </div>
-            </header>
+                    <div className="hidden items-center gap-1 max-[900px]:flex">
+                        <button className="bg-white text-black text-sm border border-white py-2 px-3 rounded-full cursor-pointer font-semibold transition-colors duration-200 hover:bg-accent-primary hover:text-white">
+                            Contact us
+                        </button>
+                        <button className="bg-accent-primary border-none flex items-center justify-center p-2 rounded-lg cursor-pointer z-60 text-white" onClick={toggleDrawer}>
+                            <Menu size={24} color="#ffffff" />
+                        </button>
+                    </div>
+                </header>
             </div>
 
             {/* Mobile Drawer */}
