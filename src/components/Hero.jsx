@@ -12,7 +12,7 @@ const Hero = () => {
 
             <InteractiveGrid />
             <h1 className="z-10 font-serif text-7xl text-center leading-[1.3] mb-10 max-w-[650px] max-[1200px]:text-[3rem] max-[1024px]:text-[3rem] max-[1024px]:mb-6 max-[768px]:text-[2.5rem]">
-                AccelForge <br /> Enterprise <span className='text-[#0097b3]'>Growth</span> that Moves Faster
+                AccelForge <br /> Enterprise <span className='text-yellow-400'>Growth</span> that Moves Faster
             </h1>
             <button className="bg-white text-[#1a1a1a] z-10 mb-14 max-[1024px]:mb-8 border-none py-4 px-8 max-[1024px]:py-3 max-[1024px]:px-4 max-[1024px]:text-base rounded-full text-lg font-semibold flex gap-2 cursor-pointer transition-all duration-200 hover:opacity-90 hover:gap-4">
                 Let's Connect <ArrowRight size={24} />
