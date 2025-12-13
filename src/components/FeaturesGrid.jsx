@@ -5,28 +5,28 @@ const FeaturesGrid = () => {
     const features = [
         {
             icon: Database,
-            title: "Digital Marketing & Demand Generation",
-            description: "From strategy to execution, we build marketing systems that generate qualified leads and drive predictable pipeline growth through content, SEO, and performance marketing.",
+            title: "Top-Notch Digital Marketing Services At Your Doorstep",
+            description: "From pushing the best content to ranking keywords, managing social media, and running ads that get in revenue, we do it all with zeal and power-packed insights as our rock-solid support.",
         },
         {
             icon: Cpu,
-            title: "Go-To-Market Strategy & RevOps",
-            description: "We design GTM strategies and optimize your revenue operations so marketing, sales, and service teams work in perfect harmony—eliminating silos and accelerating growth.",
+            title: "GTM & RevOps",
+            description: "Sales Led Growth is the proven path to rapid revenue growth and market dominance and crafting a GTM strategy is crucial for sales success. Let`s create strategies that leads to increased sales, improved efficiency, enhanced customer satisfaction, and a competitive edge.",
         },
         {
             icon: Zap,
-            title: "Lead Generation & Sales Infrastructure",
-            description: "We build pre-sales systems that qualify opportunities faster, structure your sales team, and optimize CRM to help you close deals with predictable efficiency.",
+            title: "Comprehensive Guidance to Pre-Sales and Demand Management",
+            description: "Tired of chasing unqualified leads? Let us handle the heavy lifting. We specialize in generating high-quality leads that are perfectly aligned with your target audience. Our data-driven approach ensures you get the right leads at the right time, so you can focus on closing deals and growing your business.",
         },
         {
             icon: Zap,
-            title: "Customer Experience & Retention",
-            description: "Transform customers into advocates. We optimize the entire customer journey to maximize lifetime value, reduce churn, and build sustainable competitive advantage.",
+            title: "End-to-End Customer Experience Consulting",
+            description: "Elevate your customer experience and drive long-term growth. Our customer success experts are dedicated to building strong, lasting relationships with your customers. We focus on maximizing customer value, minimizing churn, and driving long-term growth. Let us help you build a loyal customer base and increase revenue.",
         },
         {
             icon: Zap,
-            title: "OKR Alignment & Performance",
-            description: "VWe implement OKR frameworks and drive accountability across your organization—ensuring every team's goals directly contribute to revenue growth.",
+            title: "OKR Championship",
+            description: "Unlock your team's full potential with our OKR expertise. We'll help you set clear, ambitious goals, track progress effectively, and celebrate successes. Our proven approach will drive alignment, focus, and accountability, leading to measurable results. Let's transform your team's performance together.",
         }
     ];
 

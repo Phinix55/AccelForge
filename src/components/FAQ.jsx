@@ -50,7 +50,7 @@ const FAQ = () => {
 
     return (
         <section className="p-0 mb-8">
-            <div className="bg-white rounded-3xl py-16 px-8 mx-4 mb-8 max-[768px]:py-10 max-[768px]:px-5 max-[768px]:mx-4 max-[768px]:mb-4">
+            <div className="py-16 px-8 max-[768px]:py-10 max-[768px]:px-5 max-[768px]:mx-4 max-[768px]:mb-4">
                 <div className="text-center mb-12 max-w-[1000px] mx-auto max-[768px]:mb-6 max-[768px]:text-center">
                     <h2 className="font-serif text-[3rem] font-normal leading-[1.2] mb-6 text-text-primary max-[768px]:text-[2rem] max-[768px]:text-center max-[768px]:mb-3">
                         Getting Started Your <br />

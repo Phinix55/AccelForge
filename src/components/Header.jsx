@@ -36,12 +36,12 @@ const Header = () => {
                         ))}
                     </nav>
 
-                    <button className="bg-white max-[900px]:hidden text-black text-lg border-2 border-white py-3 px-7 rounded-full cursor-pointer font-semibold transition-colors duration-200 hover:bg-accent-primary hover:text-white">
+                    <button className="bg-accent-primary max-[900px]:hidden text-white text-lg border-2 border-white py-3 px-7 rounded-full cursor-pointer font-semibold transition-colors duration-200 hover:bg-accent-primary hover:text-white">
                         Contact us
                     </button>
 
                     <div className="hidden items-center gap-1 max-[900px]:flex">
-                        <button className="bg-white text-black text-sm border border-white py-2 px-3 rounded-full cursor-pointer font-semibold transition-colors duration-200 hover:bg-accent-primary hover:text-white">
+                        <button className="bg-accent-primary text-white text-sm border border-white py-2 px-3 rounded-full cursor-pointer font-semibold transition-colors duration-200 hover:bg-accent-primary hover:text-white">
                             Contact us
                         </button>
                         <button className="bg-accent-primary border-none flex items-center justify-center p-2 rounded-lg cursor-pointer z-60 text-white" onClick={toggleDrawer}>

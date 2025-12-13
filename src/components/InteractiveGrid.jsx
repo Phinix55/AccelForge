@@ -34,13 +34,15 @@ const InteractiveGrid = () => {
                     
                     if (distance < glowRadius) {
                         const intensity = 1 - (distance / glowRadius);
-                        opacity = 0.05 + intensity * 0.09;
+                        opacity = 0.05 + intensity * 0.4;
                         lineWidth = 1 + intensity * 1.5;
+                        // Blue glow
+                        ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`;
                     } else {
                         ctx.shadowBlur = 0;
+                        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
                     }
                     
-                    ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
                     ctx.lineWidth = lineWidth;
                     
                     ctx.beginPath();
@@ -63,13 +65,15 @@ const InteractiveGrid = () => {
                     
                     if (distance < glowRadius) {
                         const intensity = 1 - (distance / glowRadius);
-                        opacity = 0.05 + intensity * 0.09;
+                        opacity = 0.05 + intensity * 0.4;
                         lineWidth = 1 + intensity * 1.5;
+                        // Blue glow
+                        ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`;
                     } else {
                         ctx.shadowBlur = 0;
+                        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
                     }
                     
-                    ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
                     ctx.lineWidth = lineWidth;
                     
                     ctx.beginPath();

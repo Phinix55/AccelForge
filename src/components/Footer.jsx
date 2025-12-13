@@ -33,28 +33,23 @@ const Footer = () => {
                     <div className="max-w-[300px]">
                         <img src={logo2} alt="Company Logo" className="w-40 h-auto object-contain mb-2" />
                         <p className="text-gray-400 text-[0.9rem] leading-normal">
-                            Make your complicated <br />
-                            finance more simple
+                            Forging your Accelerated Sales Led Growth
                         </p>
                     </div>
 
                     <div className="flex gap-16 max-[768px]:flex-wrap max-[768px]:gap-8 max-[768px]:justify-start">
                         <div className="flex flex-col gap-4">
-                            <h4 className="text-[1rem] font-semibold mb-2">Extra links</h4>
-                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Features</a>
-                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Pricing</a>
-                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Contact</a>
-                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Blog</a>
+                            <h4 className="text-[1rem] font-semibold mb-2">Information Links</h4>
+                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Home</a>
+                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">About Us</a>
+                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Digital Marketing Services</a>
+                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">GTM & RevOps</a>
+                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Pre-Sales and Demand Management</a>
+                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Customer Experience Consulting</a>
+                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">OKR Championship</a>
                         </div>
                         <div className="flex flex-col gap-4">
-                            <h4 className="text-[1rem] font-semibold mb-2">Social media</h4>
-                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Instagram</a>
-                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">YouTube</a>
-                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Facebook</a>
-                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">X</a>
-                        </div>
-                        <div className="flex flex-col gap-4">
-                            <h4 className="text-[1rem] font-semibold mb-2">AccelForge</h4>
+                            <h4 className="text-[1rem] font-semibold mb-2">Contact Info</h4>
                             <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Licensing</a>
                             <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Style Guide</a>
                             <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Powered by Webflow</a>
