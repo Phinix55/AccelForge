@@ -45,7 +45,7 @@ const AnimatedNumber = ({ value, duration = 1000, suffix = '' }) => {
 
 const About = () => {
     return (
-        <section className="bg-white rounded-3xl mx-4 mb-8 py-24 px-16 max-[1024px]:py-16 max-[1024px]:px-8 max-[768px]:p-6 max-[768px]:mx-4 max-[768px]:mb-4">
+        <section className="py-24 px-16 max-[1024px]:py-16 max-[1024px]:px-8 max-[768px]:p-6 max-[768px]:mx-4 max-[768px]:mb-4">
             <div className="max-w-[1200px] mx-auto mb-24 flex justify-between items-start gap-16 max-[1024px]:flex-col max-[1024px]:items-center max-[1024px]:text-center max-[1024px]:gap-8 max-[1024px]:mb-16 max-[768px]:mb-6 max-[768px]:items-start max-[768px]:text-left">
                 <div className="shrink-0">
                     <ScrollReveal>

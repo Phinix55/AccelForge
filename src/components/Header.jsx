@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo2 from '../assets/logo2.png';
+import logo1 from '../assets/logo1.png';
 
 const Header = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -20,8 +20,8 @@ const Header = () => {
     return (
         <>
             <div className='bg-accent-primary w-full flex justify-center sticky top-0 z-50'>
-                <header className="container flex items-center justify-between max-[900px]:pr-4 py-3 max-[900px]:py-2">
-                    <img src={logo2} alt="AccelForge Logo" className="w-32 h-auto" />
+                <header className="container flex items-center justify-between max-[900px]:px-4 py-3 max-[900px]:py-2">
+                    <img src={logo1} alt="AccelForge Logo" className="w-28 h-auto" />
 
                     {/* Desktop Nav */}
                     <nav className="flex gap-15 max-[900px]:hidden">
