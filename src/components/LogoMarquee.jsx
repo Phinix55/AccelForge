@@ -18,7 +18,7 @@ const LogoMarquee = () => {
                 {[...LOGOS, ...LOGOS, ...LOGOS].map((logo, index) => (
                     <div key={index} className="shrink-0 flex items-center justify-center opacity-80 transition-opacity duration-300 hover:opacity-100">
                         {/* Using text placeholder styled as logo if image fails, or actual SVG if available */}
-                        <span className="font-bold text-3xl text-white font-sans flex items-center gap-2 before:content-[''] before:block before:w-6 before:h-6 before:bg-current before:rounded-full before:opacity-50">
+                        <span className="font-bold text-3xl text-white flex items-center gap-2 before:content-[''] before:block before:w-6 before:h-6 before:bg-current before:rounded-full before:opacity-50">
                             Logoipsum
                         </span>
                     </div>

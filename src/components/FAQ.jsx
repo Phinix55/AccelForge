@@ -52,9 +52,9 @@ const FAQ = () => {
         <section className="p-0 mb-8">
             <div className="py-16 px-8 max-[768px]:py-10 max-[768px]:px-5 max-[768px]:mx-4 max-[768px]:mb-4">
                 <div className="text-center mb-12 max-w-[1000px] mx-auto max-[768px]:mb-6 max-[768px]:text-center">
-                    <h2 className="font-serif text-[3rem] font-normal leading-[1.2] mb-6 text-text-primary max-[768px]:text-[2rem] max-[768px]:text-center max-[768px]:mb-3">
+                    <h2 className="text-[3rem] font-normal leading-tight mb-6 text-text-primary max-[768px]:text-[2rem] max-[768px]:text-center max-[768px]:mb-3">
                         Getting Started Your <br />
-                        Essential Questions <span className="font-serif italic font-normal">Answered</span>
+                        Essential Questions <span className="italic font-normal">Answered</span>
                     </h2>
                     <p className="text-[1rem] text-gray-500 max-w-[600px] mx-auto leading-[1.6] max-[768px]:text-left max-[768px]:text-[1rem] max-[768px]:mb-6">
                         Explore the answers to common queries, and if you don't find what you're looking for, our support team is always ready to assist you.

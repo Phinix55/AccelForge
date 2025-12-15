@@ -21,7 +21,7 @@ const CreditCard = ({ className }) => (
             <div className="text-[0.85rem] text-gray-500 mb-2 font-medium">Card Number</div>
             <div className="font-mono text-[1.5rem] text-gray-700 tracking-[2px] font-semibold">1234 0000 6723 0088</div>
         </div>
-        <div className="absolute -bottom-[60px] -right-[60px] w-[220px] h-[220px] bg-[#e8e8e8] rounded-full z-1 before:content-[''] before:absolute before:-top-10 before:left-10 before:w-[220px] before:h-[220px] before:bg-[#e8e8e8] before:rounded-full before:opacity-60"></div>
+        <div className="absolute -bottom-[60px] -right-[60px] w-[220px] h-[220px] bg-accent-light rounded-full z-1 before:content-[''] before:absolute before:-top-10 before:left-10 before:w-[220px] before:h-[220px] before:bg-accent-light before:rounded-full before:opacity-60"></div>
     </div>
 );
 
@@ -29,12 +29,11 @@ const CTASection = () => {
     return (
             <section className="bg-accent-primary px-28 overflow-hidden flex justify-between items-center h-[450px] bg-[linear-gradient(rgba(255,255,255,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.09)_1px,transparent_1px)] bg-size-[60px_60px] max-[1024px]:flex-col max-[1024px]:px-5 max-[1024px]:pb-40 max-[1024px]:pt-10 max-[1024px]:h-auto">
                 <div className="flex-1 max-w-[550px] z-2 text-white max-[1024px]:mb-10 max-[1024px]:max-w-full max-[768px]:flex max-[768px]:flex-col">
-                    <h2 className="font-serif text-[3rem] font-medium mb-4 leading-[1.1] max-[1024px]:text-[2.5rem] max-[1024px]:text-center max-[1024px]:mb-3 max-[768px]:text-[2.1rem] max-[768px]:leading-[1.2] max-[768px]:mb-6 max-[768px]:text-center">
-                        Ready to Transform Your <br />
-                        Financial <span className="italic font-serif font-normal">Management?</span>
+                    <h2 className="text-[3rem] font-medium mb-4 leading-[1.1] max-[1024px]:text-[2.5rem] max-[1024px]:text-center max-[1024px]:mb-3 max-[768px]:text-[2.1rem] max-[768px]:leading-[1.2] max-[768px]:mb-6 max-[768px]:text-center">
+                        Driving Sales Growth through <span className="italic font-normal">Digital Strategy</span>
                     </h2>
                     <p className="text-[1rem] leading-normal mb-8 opacity-85 max-w-[480px] max-[1024px]:text-left max-[1024px]:mb-5 max-[1024px]:text-[1rem] max-[768px]:text-[0.95rem] max-[768px]:mb-8 max-[768px]:text-left">
-                        Experience the future of finance with our cutting-edge SaaS platform. Start optimizing your financial operations today!
+                        We help businesses scale revenue with data-driven marketing, conversion optimization, and growth consulting.
                     </p>
                     <button className="bg-white text-text-primary border-none py-[0.8rem] px-[1.8rem] rounded-4xl font-semibold text-[0.95rem] cursor-pointer inline-flex items-center gap-2 transition-transform duration-200 ease-out hover:scale-105 max-[768px]:self-center">
                         Let's Talk <ArrowRight size={18} />

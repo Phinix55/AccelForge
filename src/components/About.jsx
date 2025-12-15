@@ -54,7 +54,7 @@ const About = () => {
                 </div>
                 <div className="max-w-[800px]">
                     <ScrollReveal delay={0.1}>
-                        <h2 className="text-[50px] leading-[1.2] text-text-primary mb-8 font-normal mt-0 max-w-full max-[1024px]:text-[2.5rem] max-[768px]:text-[28px] max-[768px]:mb-2 max-[768px]:leading-[1.3]">
+                        <h2 className="text-[50px] leading-tight text-text-primary mb-8 mt-0 max-w-full max-[1024px]:text-[2.5rem] max-[768px]:text-[28px] max-[768px]:mb-2 max-[768px]:leading-[1.3]">
                             Working together to deliver value
                         </h2>
                     </ScrollReveal>
@@ -68,28 +68,28 @@ const About = () => {
 
             <div className="flex justify-between items-center max-w-[1200px] mx-auto pt-8 max-[768px]:grid max-[768px]:grid-cols-2 max-[768px]:gap-8 max-[768px]:p-0">
                 <ScrollReveal delay={0.3} className="flex flex-col gap-2 text-center">
-                    <div className="text-[3.5rem] font-normal text-text-primary font-sans max-[768px]:text-[2rem]">
+                    <div className="text-[3.5rem] font-normal text-text-primary max-[768px]:text-[2rem]">
                         <AnimatedNumber value={2500} suffix="+" />
                     </div>
                     <div className="text-gray-400 text-[1rem] max-[768px]:text-[0.9rem]">Partners & customers</div>
                 </ScrollReveal>
                 <div className="w-px h-20 bg-gray-200 max-[768px]:hidden"></div>
                 <ScrollReveal delay={0.3} className="flex flex-col gap-2 text-center">
-                    <div className="text-[3.5rem] font-normal text-text-primary font-sans max-[768px]:text-[2rem]">
+                    <div className="text-[3.5rem] font-normal text-text-primary max-[768px]:text-[2rem]">
                         $<AnimatedNumber value={2259.56} duration={1200} />
                     </div>
                     <div className="text-gray-400 text-[1rem] max-[768px]:text-[0.9rem]">Raise Invest in 2024</div>
                 </ScrollReveal>
                 <div className="w-px h-20 bg-gray-200 max-[768px]:hidden"></div>
                 <ScrollReveal delay={0.3} className="flex flex-col gap-2 text-center">
-                    <div className="text-[3.5rem] font-normal text-text-primary font-sans max-[768px]:text-[2rem]">
+                    <div className="text-[3.5rem] font-normal text-text-primary max-[768px]:text-[2rem]">
                         <AnimatedNumber value={5.0} />
                     </div>
                     <div className="text-gray-400 text-[1rem] max-[768px]:text-[0.9rem]">Custome review</div>
                 </ScrollReveal>
                 <div className="w-px h-20 bg-gray-200 max-[768px]:hidden"></div>
                 <ScrollReveal delay={0.3} className="flex flex-col gap-2 text-center">
-                    <div className="text-[3.5rem] font-normal text-text-primary font-sans max-[768px]:text-[2rem]">
+                    <div className="text-[3.5rem] font-normal text-text-primary max-[768px]:text-[2rem]">
                         <AnimatedNumber value={205} suffix="+" />
                     </div>
                     <div className="text-gray-400 text-[1rem] max-[768px]:text-[0.9rem]">Produces</div>

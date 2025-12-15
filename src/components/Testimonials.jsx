@@ -43,7 +43,7 @@ const Testimonials = () => {
     return (
         <section className="py-8 pb-24 bg-white overflow-hidden max-[768px]:py-8 max-[768px]:pb-16">
             <div className="text-center max-w-[800px] mx-auto mb-16 px-4 max-[768px]:mb-8 max-[768px]:px-6">
-                <h2 className="font-serif text-[3.5rem] font-medium mb-4 text-text-primary max-[768px]:text-[2.5rem] max-[768px]:mb-4 max-[768px]:leading-[1.1]">What Our Clients <span className="italic font-serif font-normal">are Saying</span></h2>
+                <h2 className="text-[3.5rem] font-medium mb-4 leading-tight text-text-primary max-[768px]:text-[2.5rem] max-[768px]:mb-4 max-[768px]:leading-[1.1]">What Our Clients <span className="italic font-normal">are Saying</span></h2>
                 <p className="text-[1rem] text-[#888] leading-[1.6] max-[768px]:text-[1rem] max-[768px]:px-2">
                     Our users love how Mondal CRM simplifies their processes and streamlines operations
                 </p>

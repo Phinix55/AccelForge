@@ -33,7 +33,7 @@ const FeaturesGrid = () => {
     return (
         <section className="w-auto max-w-7xl mx-auto px-8 mb-16 py-16 max-[768px]:px-4 max-[768px]:mb-8 max-[768px]:py-8">
             <div className="text-center mb-16">
-                <h2 className="font-serif text-5xl font-medium text-text-primary leading-tight max-[1024px]:text-[2.5rem] max-[768px]:text-[2.2rem] max-[768px]:mb-8">Your Revenue Growth <br/> Starts Here</h2>
+                <h2 className="text-5xl font-medium text-text-primary leading-tight max-[1024px]:text-[2.5rem] max-[768px]:text-[2.2rem] max-[768px]:mb-8">Your Revenue Growth <br/> Starts <span className="italic font-normal">Here</span></h2>
             </div>
             <div className="flex flex-wrap justify-center gap-6 max-[768px]:gap-6">
                 {features.map((feature, index) => {

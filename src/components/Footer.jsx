@@ -7,9 +7,9 @@ const Footer = () => {
             <section className="bg-[#0c110f] pt-16 px-14 text-white relative overflow-hidden min-h-[600px] flex flex-col max-[768px]:pt-10 max-[768px]:px-5 max-[768px]:pb-0 max-[768px]:min-h-0">
                 {/* Subscribe Section */}
                 <div className="text-center max-w-[800px] mx-auto mb-16 relative z-2 max-[768px]:mb-8 max-[768px]:text-left">
-                    <h2 className="font-serif text-[3rem] font-normal leading-[1.2] mb-4 max-[768px]:text-[1.8rem] max-[768px]:text-center max-[768px]:mb-3">
+                    <h2 className="text-[3rem] font-normal leading-tight mb-4 max-[768px]:text-[1.8rem] max-[768px]:text-center max-[768px]:mb-3">
                         Stay Ahead with Revenue <br />
-                        <span className="font-serif italic">Growth Insights</span>
+                        <span className="italic">Growth Insights</span>
                     </h2>
                     <p className="text-gray-400 mb-8 leading-[1.6] max-[768px]:text-left max-[768px]:text-[1rem] max-[768px]:mb-5">
                         Subscribe to our newsletter for expert strategies, proven tactics, and the latest trends in B2B revenue acceleration.
@@ -18,7 +18,7 @@ const Footer = () => {
                         <input
                             type="email"
                             placeholder="Enter your email"
-                            className="flex-1 bg-white/10 border border-white/10 rounded-xl py-3 px-4 text-white font-sans placeholder:text-gray-500"
+                            className="flex-1 bg-white/10 border border-white/10 rounded-xl py-3 px-4 text-white placeholder:text-gray-500"
                         />
                         <button type="submit" className="bg-accent-primary text-white border-none rounded-xl py-3 px-8 font-medium cursor-pointer transition-colors duration-200 hover:bg-[#00123d]">
                             Subscribe
@@ -50,15 +50,22 @@ const Footer = () => {
                         </div>
                         <div className="flex flex-col gap-4">
                             <h4 className="text-[1rem] font-semibold mb-2">Contact Info</h4>
-                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Licensing</a>
-                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Style Guide</a>
-                            <a href="#" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">Powered by Webflow</a>
+                            <div className="flex flex-col gap-3">
+                                <div>
+                                    <p className="text-white text-[0.9rem] font-medium mb-1">EMAIL:</p>
+                                    <a href="mailto:sandeep@accelforge.com" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">sandeep@accelforge.com</a>
+                                </div>
+                                <div>
+                                    <p className="text-white text-[0.9rem] font-medium mb-1">PHONE:</p>
+                                    <a href="tel:+919652870848" className="text-gray-400 no-underline text-[0.9rem] transition-colors duration-200 hover:text-white">+91 9652870848</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 {/* Watermark */}
-                <div className="absolute -bottom-45 left-1/2 -translate-x-1/2 font-sans text-[18vw] font-bold text-white/5 whitespace-nowrap pointer-events-none z-1 max-[768px]:-bottom-10">
+                <div className="absolute -bottom-45 left-1/2 -translate-x-1/2 text-[18vw] font-bold text-white/5 whitespace-nowrap pointer-events-none z-1 max-[768px]:-bottom-10">
                     AccelForge
                 </div>
 
