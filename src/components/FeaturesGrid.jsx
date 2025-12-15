@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import i1 from '../assets/i1.png';
 import i2 from '../assets/i2.png';
@@ -47,7 +47,7 @@ const FeaturesGrid = () => {
             </div>
 
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 min-h-[500px]">
-                {/* Left Side: Navigation List */}
+                {/* Left Side: Navigation List (Mobile Accordion / Desktop Tabs) */}
                 <div className="flex-1 flex flex-col gap-4">
                     {features.map((feature, index) => (
                         <div
@@ -58,15 +58,45 @@ const FeaturesGrid = () => {
                                 : 'bg-white text-text-primary border-gray-100 hover:border-gray-200 hover:bg-gray-50'
                                 }`}
                         >
-                            <h3 className={`text-xl font-semibold ${activeFeature === index ? 'text-white' : 'text-text-primary'}`}>
-                                {feature.title}
-                            </h3>
+                            <div className="flex justify-between items-center w-full">
+                                <h3 className={`text-xl font-semibold pr-4 ${activeFeature === index ? 'text-white' : 'text-text-primary'}`}>
+                                    {feature.title}
+                                </h3>
+                                {/* Mobile Chevron Cue */}
+                                <ChevronDown
+                                    className={`lg:hidden transition-transform duration-300 shrink-0 ${activeFeature === index ? 'rotate-180 text-white' : 'text-gray-400'}`}
+                                    size={24}
+                                />
+                            </div>
+
+                            {/* Mobile Content Accordion */}
+                            <AnimatePresence>
+                                {activeFeature === index && (
+                                    <motion.div
+                                        initial={{ height: 0, opacity: 0 }}
+                                        animate={{ height: 'auto', opacity: 1 }}
+                                        exit={{ height: 0, opacity: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        className="lg:hidden overflow-hidden"
+                                    >
+                                        <div className="pt-4 border-t border-white/20 mt-4">
+                                            {/* Icon removed for mobile view as requested */}
+                                            <p className="text-gray-200 text-base leading-relaxed mb-6">
+                                                {feature.description}
+                                            </p>
+                                            <a href="#" className="inline-flex items-center gap-2 text-white font-bold text-base hover:gap-3 transition-all">
+                                                Learn More <ArrowRight size={18} />
+                                            </a>
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
                     ))}
                 </div>
 
-                {/* Right Side: Content Display */}
-                <div className="flex-1 bg-gray-50 rounded-2xl p-8 lg:p-12 border border-gray-200 flex items-center min-h-[600px]">
+                {/* Right Side: Content Display (Desktop Only) */}
+                <div className="hidden lg:flex flex-1 bg-gray-50 rounded-2xl p-8 lg:p-12 border border-gray-200 items-center min-h-[600px]">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={activeFeature}
