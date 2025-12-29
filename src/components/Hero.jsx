@@ -6,26 +6,29 @@ import ellipse from '../assets/ellipse.png';
 
 const Hero = () => {
     return (
-        <section className="relative flex flex-col items-center bg-accent-primary py-28 pb-20 overflow-hidden text-white max-[768px]:py-10 max-[768px]:px-4">
-            {/* Premium Gradient Background */}
-            {/* <div className="absolute inset-0 bg-[linear-gradient(135deg,#2a2a2a_0%,#1a1a1a_50%,#0a0a0a_100%)] opacity-90 z-0"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(60,60,60,0.4)_0%,transparent_70%)] z-0"></div> */}
+        <section className="relative flex flex-col items-center bg-premium-white-pattern dark:bg-bg-primary pt-48 pb-20 overflow-hidden text-[#0D0D0D] dark:text-white max-[1024px]:py-20 max-[768px]:pt-32 max-[768px]:pb-16 max-[768px]:px-4 transition-colors duration-300">
+            {/* Dark Mode: Premium Gradient Background */}
+            <div className="absolute inset-0 hidden dark:block bg-[radial-gradient(circle_at_50%_40%,_rgba(12,84,144,0.25)_0%,_rgba(3,76,140,0.1)_40%,_rgba(13,13,13,1)_80%)] z-0 pointer-events-none"></div>
+            {/* Dark Mode: Subtle overlay for depth */}
+            <div className="absolute inset-0 hidden dark:block bg-[linear-gradient(to_bottom,transparent_0%,#0D0D0D_100%)] z-0 pointer-events-none"></div>
+
+            {/* Light Mode: CLEAN WHITE - No Gradient needed for dual tone contrast */}
 
             <InteractiveGrid />
-            <h1 className="z-10 text-7xl text-center leading-tight mb-10 max-w-[950px] max-[1200px]:text-[3rem] max-[1024px]:text-[3rem] max-[1024px]:mb-6 max-[768px]:text-[2.5rem]">
-                Sales <span className="relative inline-block px-6 max-[768px]:px-3">
-                    <img src={ellipse} alt="" className="absolute -top-1 left-1/2 -translate-x-1/2 w-[370px] h-[100px] max-[1024px]:w-[280px] max-[1024px]:h-[50px] max-[1024px]:top-0 max-[768px]:w-[200px]" />
-                    <span className="relative">Growth</span>
-                </span> and Digital Marketing Consulting for Business Success
+            <h1 className="z-10 text-7xl text-center leading-tight mb-10 max-w-[950px] max-[1200px]:text-[4.5rem] max-[1024px]:text-[3.5rem] max-[1024px]:mb-8 max-[768px]:text-[2.8rem] max-[768px]:leading-[1.2] max-[480px]:text-[2.2rem] drop-shadow-sm dark:drop-shadow-2xl transition-all">
+                Sales <span className="relative inline-block px-4 max-[768px]:px-2 text-accent-primary">
+                    <img src={ellipse} alt="" className="absolute -top-3 left-1/2 -translate-x-1/2 w-[130%] h-[140%] max-w-none object-contain opacity-80 dark:opacity-60 brightness-100 dark:brightness-150 grayscale-0 sepia-0 hue-rotate-[170deg] saturate-200 pointer-events-none transition-all" />
+                    <span className="relative z-10 drop-shadow-[0_0_15px_rgba(67,217,217,0.3)] dark:drop-shadow-[0_0_15px_rgba(67,217,217,0.5)]">Growth</span>
+                </span> <br className="hidden max-[768px]:block" /> and Digital Marketing Consulting for Business Success
             </h1>
-            <button className="bg-white text-[#1a1a1a] z-10 mb-14 max-[1024px]:mb-8 border-none py-4 px-8 max-[1024px]:py-3 max-[1024px]:px-4 max-[1024px]:text-base rounded-full text-lg font-semibold flex items-center gap-2 cursor-pointer transition-all duration-200 hover:opacity-90 hover:gap-4">
+            <button className="z-10 mb-14 max-[1024px]:mb-8 border-none py-4 px-8 max-[1024px]:py-3 max-[1024px]:px-4 max-[1024px]:text-base rounded-full text-lg font-semibold flex items-center gap-2 cursor-pointer transition-all duration-300 hover:gap-4 bg-gradient-to-r from-secondary-teal to-accent-primary text-white dark:text-black hover:shadow-[0_0_25px_rgba(67,217,217,0.4)] dark:hover:shadow-[0_0_25px_rgba(67,217,217,0.6)] hover:brightness-110">
                 Let's Connect <ArrowRight size={24} />
             </button>
-            <div className="z-10 w-full">
+            <div className="z-10 w-full opacity-80 hover:opacity-100 transition-opacity duration-500">
                 <LogoMarquee />
             </div>
-            <div className='z-10 text-4xl max-[1024px]:text-[2rem] leading-relaxed max-[1024px]:leading-12 max-w-3xl text-center'>
-                Let's achieve it with the <span className='text-yellow-400'>right strategies, seamless execution, transparent communication,</span> and services that form the core of business success.
+            <div className='z-10 text-4xl max-[1024px]:text-[2rem] leading-relaxed max-[1024px]:leading-12 max-w-3xl text-center mt-12 text-gray-600 dark:text-gray-300 transition-colors'>
+                Let's achieve it with the <span className='text-accent-primary font-medium drop-shadow-[0_0_10px_rgba(67,217,217,0.2)] dark:drop-shadow-[0_0_10px_rgba(67,217,217,0.3)]'>right strategies, seamless execution, transparent communication,</span> and services that form the core of business success.
             </div>
         </section>
     );

@@ -19,33 +19,35 @@ const Header = () => {
 
     return (
         <>
-            <div className='bg-accent-primary w-full flex justify-center sticky top-0 z-50'>
-                <header className="container flex items-center justify-between max-[900px]:px-4 py-3 max-[900px]:py-2">
-                    <img src={logo1} alt="AccelForge Logo" className="w-28 h-auto" />
+            <div className='w-full fixed top-0 left-0 z-50 transition-all duration-300 backdrop-blur-md bg-white/80 dark:bg-bg-primary/80 border-b border-gray-200 dark:border-white/10 shadow-sm dark:shadow-none'>
+                <header className="container mx-auto flex items-center justify-between py-2 px-6 max-[1024px]:px-8 max-[768px]:px-4 max-[768px]:py-3">
+                    <img src={logo1} alt="AccelForge Logo" className="w-32 h-auto max-[768px]:w-24" />
 
                     {/* Desktop Nav */}
-                    <nav className="flex gap-15 max-[900px]:hidden">
+                    <nav className="flex gap-12 max-[900px]:hidden items-center">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="no-underline text-gray-400 font-medium text-lg transition-colors duration-200 hover:text-white"
+                                className="no-underline text-text-secondary font-medium text-lg transition-colors duration-200 hover:text-accent-primary hover:drop-shadow-[0_0_8px_rgba(67,217,217,0.5)]"
                             >
                                 {link.name}
                             </a>
                         ))}
                     </nav>
 
-                    <button className="bg-accent-primary max-[900px]:hidden text-white text-lg border-2 border-white py-3 px-7 rounded-full cursor-pointer font-semibold transition-colors duration-200 hover:bg-accent-primary hover:text-white">
-                        Contact us
-                    </button>
-
-                    <div className="hidden items-center gap-1 max-[900px]:flex">
-                        <button className="bg-accent-primary text-white text-sm border border-white py-2 px-3 rounded-full cursor-pointer font-semibold transition-colors duration-200 hover:bg-accent-primary hover:text-white">
+                    <div className="flex items-center gap-4 max-[900px]:hidden">
+                        <button className="bg-transparent text-text-primary text-lg border-2 border-accent-primary text-accent-primary py-2 px-7 rounded-full cursor-pointer font-semibold transition-all duration-200 hover:bg-accent-primary hover:text-black hover:shadow-[0_0_15px_rgba(67,217,217,0.4)]">
                             Contact us
                         </button>
-                        <button className="bg-accent-primary border-none flex items-center justify-center p-2 rounded-lg cursor-pointer z-60 text-white" onClick={toggleDrawer}>
-                            <Menu size={24} color="#ffffff" />
+                    </div>
+
+                    <div className="hidden items-center gap-3 max-[900px]:flex">
+                        <button className="bg-transparent text-accent-primary text-sm border border-accent-primary py-2 px-3 rounded-full cursor-pointer font-semibold transition-colors duration-200 hover:bg-accent-primary hover:text-black hover:shadow-[0_0_15px_rgba(67,217,217,0.4)] max-[900px]:hidden">
+                            Contact us
+                        </button>
+                        <button className="bg-transparent border-none flex items-center justify-center p-2 rounded-lg cursor-pointer z-60 text-text-primary" onClick={toggleDrawer}>
+                            <Menu size={24} />
                         </button>
                     </div>
                 </header>
@@ -55,14 +57,14 @@ const Header = () => {
             <AnimatePresence>
                 {isDrawerOpen && (
                     <motion.div
-                        className="fixed top-0 left-0 w-full h-screen bg-white z-100 p-8 flex flex-col"
+                        className="fixed top-0 left-0 w-full h-screen bg-white dark:bg-bg-primary z-[100] p-8 flex flex-col border-r border-gray-200 dark:border-white/10 overflow-y-auto"
                         initial={{ x: "100%" }}
                         animate={{ x: 0 }}
                         exit={{ x: "100%" }}
                         transition={{ type: "tween", duration: 0.3 }}
                     >
                         <div className="flex justify-end mb-16">
-                            <button className="bg-none border-none cursor-pointer text-text-primary p-1" onClick={toggleDrawer}>
+                            <button className="bg-transparent border-none cursor-pointer text-text-primary p-1 hover:text-accent-primary" onClick={toggleDrawer}>
                                 <X size={32} />
                             </button>
                         </div>
@@ -77,7 +79,7 @@ const Header = () => {
                                     {link.name}
                                 </a>
                             ))}
-                            <button className="mt-4 bg-accent-primary text-white border-none py-4 px-12 rounded-full text-lg font-semibold cursor-pointer w-auto" onClick={toggleDrawer}>
+                            <button className="mt-4 bg-accent-primary text-black border-none py-4 px-12 rounded-full text-lg font-semibold cursor-pointer w-auto shadow-[0_0_15px_rgba(67,217,217,0.4)]" onClick={toggleDrawer}>
                                 Contact us
                             </button>
                         </nav>

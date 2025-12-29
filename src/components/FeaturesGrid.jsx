@@ -39,10 +39,10 @@ const FeaturesGrid = () => {
     ];
 
     return (
-        <section className="w-auto max-w-7xl mx-auto px-8 mb-24 py-16 max-[768px]:px-4 max-[768px]:mb-12 max-[768px]:py-8">
-            <div className="text-center mb-16">
-                <h2 className="text-5xl font-medium text-text-primary leading-tight max-[1024px]:text-[2.5rem] max-[768px]:text-[2.2rem] max-[768px]:mb-8">
-                    Your Revenue Growth <br /> Starts <span className="italic font-normal">Here</span>
+        <section className="w-auto max-w-7xl mx-auto px-8 mb-24 py-16 max-[1024px]:px-6 max-[768px]:px-4 max-[768px]:mb-12 max-[768px]:py-8 text-brand-white dark:text-white transition-colors duration-300 bg-brand-deep dark:bg-transparent rounded-3xl shadow-xl dark:shadow-none">
+            <div className="text-center mb-16 max-[768px]:mb-10">
+                <h2 className="text-5xl font-medium text-brand-white dark:text-white leading-tight max-[1024px]:text-[3.5rem] max-[768px]:text-[2rem] max-[480px]:text-[1.8rem] max-[768px]:mb-4 transition-colors">
+                    Your Revenue Growth <br /> Starts <span className="italic font-normal text-accent-primary">Here</span>
                 </h2>
             </div>
 
@@ -53,18 +53,18 @@ const FeaturesGrid = () => {
                         <div
                             key={index}
                             onClick={() => setActiveFeature(index)}
-                            className={`p-6 rounded-xl cursor-pointer transition-all duration-300 border-2 ${activeFeature === index
-                                ? 'bg-[#001855] text-white border-[#001855] shadow-lg scale-[1.02]'
-                                : 'bg-white text-text-primary border-gray-100 hover:border-gray-200 hover:bg-gray-50'
+                            className={`p-6 rounded-xl cursor-pointer transition-all duration-300 border ${activeFeature === index
+                                ? 'bg-white dark:bg-primary-blue/30 text-[#034C8C] dark:text-white border-accent-primary shadow-lg dark:shadow-[0_0_15px_rgba(67,217,217,0.2)] scale-[1.02]'
+                                : 'bg-white/10 dark:bg-white/5 text-gray-200 dark:text-gray-300 border-white/10 dark:border-white/10 hover:border-white/30 hover:bg-white/20 dark:hover:bg-white/10 shadow-sm'
                                 }`}
                         >
                             <div className="flex justify-between items-center w-full">
-                                <h3 className={`text-xl font-semibold pr-4 ${activeFeature === index ? 'text-white' : 'text-text-primary'}`}>
+                                <h3 className={`text-xl font-semibold pr-4 ${activeFeature === index ? 'text-[#034C8C] dark:text-accent-primary' : 'text-white'}`}>
                                     {feature.title}
                                 </h3>
                                 {/* Mobile Chevron Cue */}
                                 <ChevronDown
-                                    className={`lg:hidden transition-transform duration-300 shrink-0 ${activeFeature === index ? 'rotate-180 text-white' : 'text-gray-400'}`}
+                                    className={`lg:hidden transition-transform duration-300 shrink-0 ${activeFeature === index ? 'rotate-180 text-accent-primary' : 'text-gray-400'}`}
                                     size={24}
                                 />
                             </div>
@@ -79,12 +79,12 @@ const FeaturesGrid = () => {
                                         transition={{ duration: 0.3 }}
                                         className="lg:hidden overflow-hidden"
                                     >
-                                        <div className="pt-4 border-t border-white/20 mt-4">
+                                        <div className="pt-4 border-t border-gray-200 dark:border-white/20 mt-4">
                                             {/* Icon removed for mobile view as requested */}
-                                            <p className="text-gray-200 text-base leading-relaxed mb-6">
+                                            <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-6">
                                                 {feature.description}
                                             </p>
-                                            <a href="#" className="inline-flex items-center gap-2 text-white font-bold text-base hover:gap-3 transition-all">
+                                            <a href="#" className="inline-flex items-center gap-2 text-accent-primary font-bold text-base hover:gap-3 transition-all">
                                                 Learn More <ArrowRight size={18} />
                                             </a>
                                         </div>
@@ -96,7 +96,8 @@ const FeaturesGrid = () => {
                 </div>
 
                 {/* Right Side: Content Display (Desktop Only) */}
-                <div className="hidden lg:flex flex-1 bg-gray-50 rounded-2xl p-8 lg:p-12 border border-gray-200 items-center min-h-[600px]">
+                <div className="hidden lg:flex flex-1 bg-white/10 dark:bg-white/5 rounded-2xl p-8 lg:p-12 border border-white/20 dark:border-white/10 items-center min-h-[600px] backdrop-blur-sm relative overflow-hidden shadow-xl dark:shadow-none transition-colors duration-300">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-accent-primary/20 dark:bg-accent-primary/20 blur-[60px] rounded-full pointer-events-none"></div>
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={activeFeature}
@@ -104,22 +105,22 @@ const FeaturesGrid = () => {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -20 }}
                             transition={{ duration: 0.3 }}
-                            className="w-full"
+                            className="w-full relative z-10"
                         >
-                            <div className="mb-8">
+                            <div className="mb-8 p-4 bg-white/10 dark:bg-white/10 rounded-full w-fit backdrop-blur-md border border-white/20 dark:border-white/10">
                                 <img
                                     src={features[activeFeature].icon}
                                     alt=""
-                                    className="w-24 h-24 object-contain"
+                                    className="w-16 h-16 object-contain brightness-0 invert"
                                 />
                             </div>
-                            <h3 className="text-3xl font-bold mb-6 text-text-primary leading-tight">
+                            <h3 className="text-3xl font-bold mb-6 text-white dark:text-white leading-tight transition-colors">
                                 {features[activeFeature].title}
                             </h3>
-                            <p className="text-[#6b7280] text-lg leading-relaxed mb-8">
+                            <p className="text-gray-200 dark:text-gray-300 text-lg leading-relaxed mb-8 transition-colors">
                                 {features[activeFeature].description}
                             </p>
-                            <a href="#" className="inline-flex items-center gap-2 text-[#001855] font-bold text-lg hover:gap-3 transition-all">
+                            <a href="#" className="inline-flex items-center gap-2 text-accent-primary font-bold text-lg hover:gap-3 transition-all shadow-cyan- glow">
                                 Learn More <ArrowRight size={20} />
                             </a>
                         </motion.div>

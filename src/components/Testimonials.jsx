@@ -41,25 +41,27 @@ const testimonialsData = [
 
 const Testimonials = () => {
     return (
-        <section className="py-8 pb-5 bg-accent-primary bg-[linear-gradient(rgba(255,255,255,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.09)_1px,transparent_1px)] bg-size-[60px_60px] overflow-hidden max-[768px]:py-8 max-[768px]:pb-16">
-            <div className="text-center max-w-[800px] mx-auto mb-16 px-4 max-[768px]:mb-8 max-[768px]:px-6">
-                <h2 className="text-[3.5rem] font-medium mb-4 leading-tight text-white max-[768px]:text-[2.5rem] max-[768px]:mb-4 max-[768px]:leading-[1.1]">What Our Clients <span className="italic font-normal">are Saying</span></h2>
-                <p className="text-[1rem] text-[#888] leading-[1.6] max-[768px]:text-[1rem] max-[768px]:px-2">
+
+        <section className="py-8 pb-5 bg-brand-teal-gradient dark:bg-bg-primary dark:bg-none overflow-hidden max-[768px]:py-8 max-[768px]:pb-16 relative transition-colors duration-300">
+            <div className="absolute inset-0 bg-transparent dark:bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size-[60px_60px] pointer-events-none"></div>
+            <div className="text-center max-w-[800px] mx-auto mb-16 px-4 max-[768px]:mb-10 max-[768px]:px-6 relative z-10">
+                <h2 className="text-[3.5rem] font-medium mb-4 leading-tight text-brand-white dark:text-white max-[1024px]:text-[3rem] max-[768px]:text-[2.2rem] max-[768px]:mb-4 max-[768px]:leading-[1.15] transition-colors">What Our Clients <span className="italic font-normal text-brand-white">are Saying</span></h2>
+                <p className="text-[1rem] text-brand-white dark:text-gray-300 leading-[1.6] max-[768px]:text-[0.95rem] max-[768px]:px-2 transition-colors">
                     Our users love how Mondal CRM simplifies their processes and streamlines operations
                 </p>
             </div>
 
-            <div className="relative w-full overflow-hidden py-8 mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+            <div className="relative w-full overflow-hidden py-8 mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] z-10">
                 <div className="flex gap-8 w-max animate-scroll hover:[animation-play-state:paused]">
                     {/* Render cards twice for seamless loop */}
                     {[...testimonialsData, ...testimonialsData].map((item, index) => (
-                        <div key={`${item.id}-${index}`} className="bg-white border border-[#eee] rounded-3xl p-8 w-[350px] shrink-0 flex flex-col justify-between transition-all duration-300 ease-out cursor-default hover:scale-105 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:border-transparent hover:z-10 max-[768px]:w-full max-[768px]:max-w-[300px] max-[768px]:p-6">
-                            <p className="text-[1rem] leading-[1.6] text-[#555] mb-8 font-normal">{item.quote}</p>
+                        <div key={`${item.id}-${index}`} className="bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 backdrop-blur-md rounded-3xl p-8 w-[350px] shrink-0 flex flex-col justify-between transition-all duration-300 ease-out cursor-default hover:scale-105 hover:shadow-xl dark:hover:shadow-[0_20px_40px_rgba(67,217,217,0.1)] hover:border-white/40 hover:z-10 max-[768px]:w-full max-[768px]:max-w-[300px] max-[768px]:p-6 group shadow-sm dark:shadow-none">
+                            <p className="text-[1rem] leading-[1.6] text-white dark:text-gray-300 mb-8 font-normal transition-colors">{item.quote}</p>
                             <div className="flex items-center gap-4">
-                                <img src={item.image} alt={item.name} className="w-12 h-12 rounded-full object-cover" />
-                                <div className="flex flex-col">
-                                    <h4 className="text-[1rem] font-bold text-text-primary mb-1">{item.name}</h4>
-                                    <span className="text-[0.85rem] text-[#888]">{item.role}</span>
+                                <img src={item.image} alt={item.name} className="w-12 h-12 rounded-full object-cover ring-2 ring-white/30 group-hover:ring-white" />
+                                <div className="flex flex-col text-left">
+                                    <h4 className="text-[1rem] font-bold text-white dark:text-white mb-1 transition-colors">{item.name}</h4>
+                                    <span className="text-[0.85rem] text-accent-primary/80">{item.role}</span>
                                 </div>
                             </div>
                         </div>

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 html {
@@ -9,11 +10,58 @@ html {
     font-family: "Montserrat", sans-serif;
 }
 
+:root {
+    /* Default Dark Mode Variables */
+    --color-bg-primary: #0D0D0D;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #B0B0B0;
+
+    --color-accent-primary: #43D9D9;
+    --color-primary-blue: #034C8C;
+    --color-primary-mid: #0C5490;
+    --color-secondary-teal: #218DA6;
+
+    /* Card/Surface Colors */
+    --color-card-bg: rgba(255, 255, 255, 0.05);
+    --color-card-border: rgba(255, 255, 255, 0.1);
+
+    /* Dual Tone Palette */
+    --brand-deep-blue: #034C8C;
+    --brand-medium-blue: #0C5490;
+    --brand-teal: #218DA6;
+    --brand-black: #0D0D0D;
+}
+
+[data-theme='light'] {
+    /* Premium Light Mode Overrides */
+    --color-bg-primary: #FFFFFF;
+    --color-text-primary: #0D0D0D;
+    --color-text-secondary: #334155;
+
+    /* Adjusted Accents for Light Mode Contrast */
+    --color-accent-primary: #0C5490;
+    --color-primary-blue: #034C8C;
+    --color-primary-mid: #218DA6;
+
+    /* Card/Surface Colors */
+    --color-card-bg: #FFFFFF;
+    --color-card-border: #E2E8F0;
+}
+
 @theme {
-    --color-bg-primary: #f8f9fa;
-    --color-text-primary: #1a1a1a;
-    --color-accent-primary: #1a1a1a;
-    --color-accent-light: #e8e8e8;
+    /* Map Tailwind classes to CSS Variables */
+    --color-bg-primary: var(--color-bg-primary);
+    --color-text-primary: var(--color-text-primary);
+    --color-text-secondary: var(--color-text-secondary);
+
+    --color-accent-primary: var(--color-accent-primary);
+    --color-primary-blue: var(--color-primary-blue);
+    --color-primary-mid: var(--color-primary-mid);
+    --color-secondary-teal: var(--color-secondary-teal);
+
+    /* Custom Utilities */
+    --color-card-bg: var(--color-card-bg);
+    --color-card-border: var(--color-card-border);
 
     --font-serif: "Montserrat", sans-serif;
     --font-sans: "Montserrat", sans-serif;
@@ -29,4 +77,37 @@ html {
             transform: translateX(-50%);
         }
     }
+}
+
+/* Premium Light Mode Utilities */
+:root:not([class*="dark"]) .bg-brand-deep {
+    /* Rich Gradient: Mid Blue -> Deep Blue for Depth */
+    background: linear-gradient(135deg, #034C8C 0%, #023E73 100%) !important;
+}
+
+:root:not([class*="dark"]) .bg-brand-teal-gradient {
+    /* Smooth Teal Flow */
+    background: linear-gradient(135deg, #0C5490 0%, #218DA6 100%) !important;
+}
+
+:root:not([class*="dark"]) .bg-brand-black {
+    /* Pure Premium Black */
+    background-color: #0D0D0D !important;
+}
+
+/* Texture for White Sections (Hero, HowItWorks) */
+:root:not([class*="dark"]) .bg-premium-white-pattern {
+    background-color: #FFFFFF !important;
+    background-image: radial-gradient(#E2E8F0 1px, transparent 1px) !important;
+    background-size: 32px 32px !important;
+}
+
+/* Helper to force text white in these sections */
+:root:not([class*="dark"]) .text-brand-white {
+    color: #FFFFFF !important;
+}
+
+/* Helper to force text dark in white sections */
+:root:not([class*="dark"]) .text-brand-dark {
+    color: #0D0D0D !important;
 }
