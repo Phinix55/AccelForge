@@ -18,8 +18,8 @@ const HowItWorks = () => {
             </div>
 
             <div className="grid grid-cols-3 gap-6 max-w-[1200px] mx-auto mb-4 max-[1024px]:grid-cols-1 max-[1024px]:max-w-[600px] max-[768px]:gap-4 max-[768px]:mb-8 relative z-10">
-                <ScrollReveal delay={0.2}>
-                    <div className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 backdrop-blur-sm text-gray-900 dark:text-white rounded-3xl p-10 pb-8 text-left min-h-[280px] flex flex-col transition-all duration-300 ease-out cursor-default hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-[0_10px_30px_rgba(67,217,217,0.15)] hover:border-accent-primary/30 max-[768px]:p-6 max-[768px]:min-h-0 max-[768px]:rounded-[20px] group shadow-sm dark:shadow-none">
+                <ScrollReveal delay={0.2} className="h-full">
+                    <div className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 backdrop-blur-sm text-gray-900 dark:text-white rounded-3xl p-10 pb-8 text-left min-h-[280px] h-full flex flex-col transition-all duration-300 ease-out cursor-default hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-[0_10px_30px_rgba(67,217,217,0.15)] hover:border-accent-primary/30 max-[768px]:p-6 max-[768px]:min-h-0 max-[768px]:rounded-[20px] group shadow-sm dark:shadow-none">
                         <div className="text-[3.5rem] font-normal mb-2 text-gray-200 dark:text-white/20 group-hover:text-accent-primary/50 transition-colors opacity-100 max-[768px]:text-[3rem] max-[768px]:mb-1">1</div>
                         <h3 className="text-[1.4rem] font-semibold mb-3 tracking-[-0.01em] text-accent-primary max-[1024px]:text-[1.15rem] max-[1024px]:mb-2 max-[768px]:text-[1.25rem] max-[768px]:mb-2">Strategic Discovery & Planning</h3>
                         <p className="text-[1rem] text-gray-600 dark:text-gray-400 leading-[1.6] max-[1024px]:text-[0.9rem] max-[1024px]:leading-normal max-[768px]:text-[0.95rem] transition-colors">
@@ -27,8 +27,8 @@ const HowItWorks = () => {
                         </p>
                     </div>
                 </ScrollReveal>
-                <ScrollReveal delay={0.3}>
-                    <div className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 backdrop-blur-sm text-gray-900 dark:text-white rounded-3xl p-10 text-left min-h-[280px] flex flex-col transition-all duration-300 ease-out cursor-default hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-[0_10px_30px_rgba(67,217,217,0.15)] hover:border-accent-primary/30 max-[768px]:p-6 max-[768px]:min-h-0 max-[768px]:rounded-[20px] group shadow-sm dark:shadow-none">
+                <ScrollReveal delay={0.3} className="h-full">
+                    <div className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 backdrop-blur-sm text-gray-900 dark:text-white rounded-3xl p-10 text-left min-h-[280px] h-full flex flex-col transition-all duration-300 ease-out cursor-default hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-[0_10px_30px_rgba(67,217,217,0.15)] hover:border-accent-primary/30 max-[768px]:p-6 max-[768px]:min-h-0 max-[768px]:rounded-[20px] group shadow-sm dark:shadow-none">
                         <div className="text-[3.5rem] font-normal mb-2 text-gray-200 dark:text-white/20 group-hover:text-accent-primary/50 transition-colors opacity-100 max-[768px]:text-[3rem] max-[768px]:mb-1">2</div>
                         <h3 className="text-[1.4rem] font-semibold mb-3 tracking-[-0.01em] text-accent-primary max-[1024px]:text-[1.15rem] max-[1024px]:mb-2 max-[768px]:text-[1.25rem] max-[768px]:mb-2">Execution & Implementation</h3>
                         <p className="text-[1rem] text-gray-600 dark:text-gray-400 leading-[1.6] max-[1024px]:text-[0.9rem] max-[1024px]:leading-normal max-[768px]:text-[0.95rem] transition-colors">
@@ -36,8 +36,8 @@ const HowItWorks = () => {
                         </p>
                     </div>
                 </ScrollReveal>
-                <ScrollReveal delay={0.4}>
-                    <div className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 backdrop-blur-sm text-gray-900 dark:text-white rounded-3xl p-10 text-left min-h-[280px] flex flex-col transition-all duration-300 ease-out cursor-default hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-[0_10px_30px_rgba(67,217,217,0.15)] hover:border-accent-primary/30 max-[768px]:p-6 max-[768px]:min-h-0 max-[768px]:rounded-[20px] group shadow-sm dark:shadow-none">
+                <ScrollReveal delay={0.4} className="h-full">
+                    <div className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 backdrop-blur-sm text-gray-900 dark:text-white rounded-3xl p-10 text-left min-h-[280px] h-full flex flex-col transition-all duration-300 ease-out cursor-default hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-[0_10px_30px_rgba(67,217,217,0.15)] hover:border-accent-primary/30 max-[768px]:p-6 max-[768px]:min-h-0 max-[768px]:rounded-[20px] group shadow-sm dark:shadow-none">
                         <div className="text-[3.5rem] font-normal mb-2 text-gray-200 dark:text-white/20 group-hover:text-accent-primary/50 transition-colors opacity-100 max-[768px]:text-[3rem] max-[768px]:mb-1">3</div>
                         <h3 className="text-[1.4rem] font-semibold mb-3 tracking-[-0.01em] text-accent-primary max-[1024px]:text-[1.15rem] max-[1024px]:mb-2 max-[768px]:text-[1.25rem] max-[768px]:mb-2">Optimize, Scale & Sustain</h3>
                         <p className="text-[1rem] text-gray-600 dark:text-gray-400 leading-[1.6] max-[1024px]:text-[0.9rem] max-[1024px]:leading-normal max-[768px]:text-[0.95rem] transition-colors">
