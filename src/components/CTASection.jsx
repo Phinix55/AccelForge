@@ -27,24 +27,30 @@ const CreditCard = ({ className }) => (
 
 const CTASection = () => {
     return (
-        <section className="bg-brand-deep dark:bg-bg-primary px-28 overflow-hidden flex justify-between items-center h-[450px] relative transition-colors duration-300 shadow-2xl dark:shadow-none">
+        <section className="bg-brand-deep dark:bg-bg-primary px-6 lg:px-28 py-12 lg:py-0 overflow-hidden flex flex-col lg:flex-row justify-between items-center h-auto lg:h-[450px] relative transition-colors duration-300 shadow-2xl dark:shadow-none gap-10 lg:gap-0">
             <div className="absolute inset-0 hidden dark:block bg-gradient-to-br from-primary-blue/20 to-bg-primary z-0 pointer-events-none transition-colors duration-300"></div>
-            <div className="flex-1 max-w-[550px] z-2 text-brand-white dark:text-white max-[1024px]:mb-10 max-[1024px]:max-w-full max-[768px]:flex max-[768px]:flex-col">
-                <h2 className="text-[3rem] font-medium mb-4 leading-[1.1] max-[1024px]:text-[2.5rem] max-[1024px]:text-center max-[1024px]:mb-3 max-[768px]:text-[2.1rem] max-[768px]:leading-[1.2] max-[768px]:mb-6 max-[768px]:text-center drop-shadow-sm dark:drop-shadow-lg transition-colors">
+
+            {/* Text Content */}
+            <div className="flex-1 max-w-full lg:max-w-[550px] z-2 text-brand-white dark:text-white flex flex-col items-center lg:items-start text-center lg:text-left">
+                <h2 className="text-[2.2rem] lg:text-[3rem] font-medium mb-4 leading-[1.2] lg:leading-[1.1] drop-shadow-sm dark:drop-shadow-lg transition-colors">
                     Driving Sales Growth through <span className="italic font-normal text-brand-white dark:text-accent-primary">Digital Strategy</span>
                 </h2>
-                <p className="text-[1rem] leading-normal mb-8 opacity-85 max-w-[480px] text-brand-white dark:text-gray-300 max-[1024px]:text-left max-[1024px]:mb-5 max-[1024px]:text-[1rem] max-[768px]:text-[0.95rem] max-[768px]:mb-8 max-[768px]:text-left transition-colors">
+                <p className="text-[1rem] leading-normal mb-8 opacity-85 max-w-[480px] text-brand-white dark:text-gray-300 transition-colors">
                     We help businesses scale revenue with data-driven marketing, conversion optimization, and growth consulting.
                 </p>
-                <button className="bg-accent-primary text-black border-none py-[0.8rem] px-[1.8rem] rounded-4xl font-semibold text-[0.95rem] cursor-pointer inline-flex items-center gap-2 transition-all duration-200 ease-out hover:scale-105 hover:shadow-[0_0_20px_rgba(67,217,217,0.4)] max-[768px]:self-center">
+                <button className="bg-accent-primary text-black border-none py-[0.8rem] px-[1.8rem] rounded-4xl font-semibold text-[0.95rem] cursor-pointer inline-flex items-center gap-2 transition-all duration-200 ease-out hover:scale-105 hover:shadow-[0_0_20px_rgba(67,217,217,0.4)]">
                     Let's Talk <ArrowRight size={18} />
                 </button>
             </div>
 
-            <div className="flex-1 relative h-full max-[1024px]:w-full max-[1024px]:h-[400px] max-[1024px]:justify-center z-10">
-                <div className="absolute -right-5 -top-5 w-[500px] h-[110%] flex items-center justify-center max-[1024px]:relative max-[1024px]:-right-15 max-[1024px]:top-auto max-[1024px]:transform-none max-[1024px]:w-full max-[1024px]:justify-center max-[1024px]:mt-4">
-                    <CreditCard className="top-15 left-10 -rotate-15 z-1 max-[1024px]:left-0 max-[1024px]:-top-3 shadow-xl dark:shadow-2xl border border-gray-100 dark:border-none" />
-                    <CreditCard className="top-26 left-40 -rotate-15 z-2 max-[1024px]:left-20 max-[1024px]:top-8 shadow-xl dark:shadow-2xl border border-gray-100 dark:border-none" />
+            {/* Visual/Cards Section */}
+            <div className="flex-1 relative w-full flex justify-center lg:justify-end items-center min-h-[300px] lg:h-full z-10">
+                <div className="relative w-full max-w-[400px] lg:w-[500px] flex justify-center lg:block h-full">
+                    {/* Cards Container - Adjusted for mobile centering */}
+                    <div className="relative w-full h-[300px] lg:h-full lg:absolute lg:-right-5 lg:-top-5">
+                        <CreditCard className="left-1/2 -translate-x-1/2 top-4 lg:translate-x-0 lg:left-10 lg:-rotate-15 z-1 shadow-xl dark:shadow-2xl border border-gray-100 dark:border-none scale-90 lg:scale-100 origin-center" />
+                        <CreditCard className="left-1/2 -translate-x-[40%] top-16 lg:translate-x-0 lg:left-40 lg:-rotate-15 lg:top-20 z-2 shadow-xl dark:shadow-2xl border border-gray-100 dark:border-none scale-90 lg:scale-100 origin-center" />
+                    </div>
                 </div>
             </div>
         </section>
