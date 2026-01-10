@@ -1,7 +1,35 @@
+import React, { useState, useEffect } from 'react';
 import logo2 from '../assets/logo2.png';
 
 
 const Footer = () => {
+    const [showForm, setShowForm] = useState(false);
+
+    useEffect(() => {
+        if (showForm) {
+            const loadTally = () => {
+                if (typeof Tally !== 'undefined') {
+                    Tally.loadEmbeds();
+                } else {
+                    document.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((e) => {
+                        e.src = e.dataset.tallySrc;
+                    });
+                }
+            };
+
+            const scriptUrl = "https://tally.so/widgets/embed.js";
+            if (!document.querySelector(`script[src="${scriptUrl}"]`)) {
+                const script = document.createElement("script");
+                script.src = scriptUrl;
+                script.onload = loadTally;
+                script.onerror = loadTally;
+                document.body.appendChild(script);
+            } else {
+                loadTally();
+            }
+        }
+    }, [showForm]);
+
     return (
         <div>
 
@@ -15,16 +43,29 @@ const Footer = () => {
                     <p className="text-brand-white dark:text-gray-400 mb-8 leading-[1.6] max-[768px]:text-[0.95rem] max-[768px]:text-left max-[768px]:mb-6 transition-colors">
                         Subscribe to our newsletter for expert strategies, proven tactics, and the latest trends in B2B revenue acceleration.
                     </p>
-                    <form className="flex gap-4 max-w-[500px] mx-auto max-[768px]:flex-col max-[768px]:gap-3" onSubmit={(e) => e.preventDefault()}>
-                        <input
-                            type="email"
-                            placeholder="Enter your email"
-                            className="flex-1 bg-white/10 dark:bg-white/5 border border-white/10 dark:border-white/10 rounded-xl py-3 px-4 text-white dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-600 focus:outline-none focus:border-accent-primary/50 transition-colors shadow-inner"
-                        />
-                        <button type="submit" className="bg-white text-black border-none rounded-xl py-3 px-8 font-medium cursor-pointer transition-all duration-200 hover:bg-accent-primary hover:text-black hover:shadow-[0_0_15px_rgba(67,217,217,0.3)]">
-                            Subscribe
+
+                    {!showForm ? (
+                        <button
+                            onClick={() => setShowForm(true)}
+                            className="bg-accent-primary text-black border-none rounded-xl py-3 px-8 font-medium cursor-pointer transition-all duration-200 hover:bg-white hover:text-black hover:shadow-[0_0_15px_rgba(67,217,217,0.3)] shadow-[0_0_10px_rgba(67,217,217,0.2)]"
+                        >
+                            Register your interest
                         </button>
-                    </form>
+                    ) : (
+                        <div className="w-full mt-8">
+                            <iframe
+                                data-tally-src="https://tally.so/embed/9q9VL1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                                loading="lazy"
+                                width="100%"
+                                height="1000"
+                                frameBorder="0"
+                                marginHeight="0"
+                                marginWidth="0"
+                                title="Let’s See If We’re a Fit"
+                                className="w-full invert hue-rotate-180"
+                            ></iframe>
+                        </div>
+                    )}
                 </div>
 
                 <div className="h-px bg-white/10 dark:bg-white/10 w-full mb-16 max-[768px]:mb-12 transition-colors"></div>
