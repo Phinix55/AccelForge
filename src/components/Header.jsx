@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo1 from '../assets/logo1.png';
+import { useForm } from '../context/FormContext';
 
 const Header = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const { openForm } = useForm();
 
     const toggleDrawer = () => {
         setIsDrawerOpen(!isDrawerOpen);
@@ -37,8 +39,13 @@ const Header = () => {
                     </nav>
 
                     <div className="flex items-center gap-4 max-[900px]:hidden">
-                        <button className="bg-transparent text-text-primary text-lg border-2 border-accent-primary text-accent-primary py-2 px-7 rounded-full cursor-pointer font-semibold transition-all duration-200 hover:bg-accent-primary hover:text-black hover:shadow-[0_0_15px_rgba(67,217,217,0.4)]">
-                            Contact us
+                        <button
+                            onClick={openForm}
+                            className="group flex items-center bg-transparent text-[#37ABD6] border-2 border-[#37ABD6] rounded-full cursor-pointer font-semibold transition-all duration-300 hover:bg-[#37ABD6] hover:text-white hover:shadow-[0_0_15px_rgba(55,171,214,0.4)] overflow-hidden w-12 hover:w-40 h-12 justify-center hover:justify-start hover:px-5"
+                            aria-label="Contact Us"
+                        >
+                            <Phone size={20} className="shrink-0" />
+                            <span className="whitespace-nowrap opacity-0 max-w-0 group-hover:max-w-xs group-hover:ml-2 group-hover:opacity-100 transition-all duration-300 overflow-hidden">Contact us</span>
                         </button>
                     </div>
 
@@ -79,7 +86,7 @@ const Header = () => {
                                     {link.name}
                                 </a>
                             ))}
-                            <button className="mt-4 bg-accent-primary text-black border-none py-4 px-12 rounded-full text-lg font-semibold cursor-pointer w-auto shadow-[0_0_15px_rgba(67,217,217,0.4)]" onClick={toggleDrawer}>
+                            <button className="mt-4 bg-accent-primary text-black border-none py-4 px-12 rounded-full text-lg font-semibold cursor-pointer w-auto shadow-[0_0_15px_rgba(67,217,217,0.4)]" onClick={() => { toggleDrawer(); openForm(); }}>
                                 Contact us
                             </button>
                         </nav>

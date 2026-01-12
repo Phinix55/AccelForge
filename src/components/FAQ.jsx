@@ -29,8 +29,8 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
     return (
         <div className={`bg-white dark:bg-white/5 rounded-2xl p-6 px-8 cursor-pointer transition-all duration-200 ease-out overflow-hidden border border-gray-200 dark:border-white/5 hover:bg-gray-50 dark:hover:bg-white/10 max-[768px]:p-4 max-[768px]:px-5 shadow-sm dark:shadow-none ${isOpen ? 'bg-gray-50 dark:bg-white/10 border-accent-primary/20 scale-[1.01]' : ''}`} onClick={onClick}>
             <div className="flex justify-between items-center">
-                <h3 className={`text-[1.1rem] font-medium m-0 max-[768px]:text-[1rem] max-[768px]:text-left transition-colors ${isOpen ? 'text-accent-primary' : 'text-gray-900 dark:text-white'}`}>{question}</h3>
-                <span className={`flex items-center justify-center transition-transform duration-300 ease-out ${isOpen ? 'rotate-180 text-accent-primary' : 'text-gray-500 dark:text-white'}`}>
+                <h3 className={`text-[1.1rem] font-medium m-0 max-[768px]:text-[1rem] max-[768px]:text-left transition-colors ${isOpen ? 'text-[#37ABD6]' : 'text-gray-900 dark:text-white'}`}>{question}</h3>
+                <span className={`flex items-center justify-center transition-transform duration-300 ease-out ${isOpen ? 'rotate-180 text-[#37ABD6]' : 'text-gray-500 dark:text-white'}`}>
                     {isOpen ? <Minus size={20} /> : <Plus size={20} />}
                 </span>
             </div>
@@ -54,7 +54,7 @@ const FAQ = () => {
                 <div className="text-center mb-12 max-w-[1000px] mx-auto max-[768px]:mb-8">
                     <h2 className="text-[3rem] font-normal leading-tight mb-6 text-gray-900 dark:text-white max-[1024px]:text-[2.5rem] max-[768px]:text-[2rem] max-[480px]:text-[1.75rem] max-[768px]:mb-4 transition-colors">
                         Getting Started Your <br />
-                        Essential Questions <span className="italic font-normal text-accent-primary">Answered</span>
+                        Essential Questions <span className="italic font-normal bg-gradient-to-r from-[#37ABD6] to-[#0B71B3] bg-clip-text text-transparent">Answered</span>
                     </h2>
                     <p className="text-[1rem] text-gray-600 dark:text-gray-500 max-w-[600px] mx-auto leading-[1.6] max-[768px]:text-[0.95rem] max-[768px]:px-2 transition-colors">
                         Explore the answers to common queries, and if you don't find what you're looking for, our support team is always ready to assist you.

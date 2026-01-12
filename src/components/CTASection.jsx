@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Wifi } from 'lucide-react';
 import logo1 from '../assets/logo1.png';
+import { useForm } from '../context/FormContext';
 
 
 const CreditCard = ({ className }) => (
@@ -26,6 +27,7 @@ const CreditCard = ({ className }) => (
 );
 
 const CTASection = () => {
+    const { openForm } = useForm();
     return (
         <section className="bg-brand-deep dark:bg-bg-primary px-6 lg:px-28 py-12 lg:py-0 overflow-hidden flex flex-col lg:flex-row justify-between items-center h-auto lg:h-[450px] relative transition-colors duration-300 shadow-2xl dark:shadow-none gap-10 lg:gap-0">
             <div className="absolute inset-0 hidden dark:block bg-gradient-to-br from-primary-blue/20 to-bg-primary z-0 pointer-events-none transition-colors duration-300"></div>
@@ -33,12 +35,15 @@ const CTASection = () => {
             {/* Text Content */}
             <div className="flex-1 max-w-full lg:max-w-[550px] z-2 text-brand-white dark:text-white flex flex-col items-center lg:items-start text-center lg:text-left">
                 <h2 className="text-[2.2rem] lg:text-[3rem] font-medium mb-4 leading-[1.2] lg:leading-[1.1] drop-shadow-sm dark:drop-shadow-lg transition-colors">
-                    Driving Sales Growth through <span className="italic font-normal text-brand-white dark:text-accent-primary">Digital Strategy</span>
+                    Driving Sales Growth through <span className="italic font-normal text-brand-white dark:bg-gradient-to-r dark:from-[#37ABD6] dark:to-[#0B71B3] dark:bg-clip-text dark:text-transparent">Digital Strategy</span>
                 </h2>
                 <p className="text-[1rem] leading-normal mb-8 opacity-85 max-w-[480px] text-brand-white dark:text-gray-300 transition-colors">
                     We help businesses scale revenue with data-driven marketing, conversion optimization, and growth consulting.
                 </p>
-                <button className="bg-accent-primary text-black border-none py-[0.8rem] px-[1.8rem] rounded-4xl font-semibold text-[0.95rem] cursor-pointer inline-flex items-center gap-2 transition-all duration-200 ease-out hover:scale-105 hover:shadow-[0_0_20px_rgba(67,217,217,0.4)]">
+                <button
+                    onClick={openForm}
+                    className="bg-gradient-to-r from-[#FFD62F] to-[#FFAF45] text-black border-none py-[0.8rem] px-[1.8rem] rounded-4xl font-semibold text-[0.95rem] cursor-pointer inline-flex items-center gap-2 transition-all duration-200 ease-out hover:scale-105 hover:shadow-[0_0_20px_rgba(255,175,69,0.4)]"
+                >
                     Let's Talk <ArrowRight size={18} />
                 </button>
             </div>

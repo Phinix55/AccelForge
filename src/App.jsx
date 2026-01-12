@@ -11,45 +11,48 @@ import Footer from './components/Footer';
 import ScrollReveal from './components/ScrollReveal';
 
 import { ThemeProvider } from './context/ThemeContext';
+import { FormProvider } from './context/FormContext';
 
 function App() {
   return (
     <ThemeProvider>
-      <div className="bg-bg-primary min-h-screen font-sans text-text-primary overflow-x-hidden selection:bg-accent-primary selection:text-black">
-        <Header />
-        <main>
-          <ScrollReveal>
-            <Hero />
-          </ScrollReveal>
-          <div id="about">
+      <FormProvider>
+        <div className="bg-bg-primary min-h-screen font-sans text-text-primary overflow-x-hidden selection:bg-accent-primary selection:text-black">
+          <Header />
+          <main>
             <ScrollReveal>
-              <About />
+              <Hero />
             </ScrollReveal>
-          </div>
-          <ScrollReveal>
-            <HowItWorks />
-          </ScrollReveal>
-          <div id="services">
+            <div id="about">
+              <ScrollReveal>
+                <About />
+              </ScrollReveal>
+            </div>
             <ScrollReveal>
-              <FeaturesGrid />
+              <HowItWorks />
             </ScrollReveal>
-          </div>
-          <ScrollReveal>
-            <Testimonials />
-          </ScrollReveal>
-          <ScrollReveal>
-            <CTASection />
-          </ScrollReveal>
-          <div id="faq">
+            <div id="services">
+              <ScrollReveal>
+                <FeaturesGrid />
+              </ScrollReveal>
+            </div>
             <ScrollReveal>
-              <FAQ />
+              <Testimonials />
             </ScrollReveal>
-          </div>
-        </main>
-        <ScrollReveal>
-          <Footer />
-        </ScrollReveal>
-      </div>
+            <ScrollReveal>
+              <CTASection />
+            </ScrollReveal>
+            <div id="faq">
+              <ScrollReveal>
+                <FAQ />
+              </ScrollReveal>
+            </div>
+          </main>
+          <ScrollReveal>
+            <Footer />
+          </ScrollReveal>
+        </div>
+      </FormProvider>
     </ThemeProvider>
   );
 }

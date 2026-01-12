@@ -42,7 +42,7 @@ const FeaturesGrid = () => {
         <section className="w-auto max-w-7xl mx-auto px-8 mb-24 py-16 max-[1024px]:px-6 max-[768px]:px-4 max-[768px]:mb-12 max-[768px]:py-8 text-brand-white dark:text-white transition-colors duration-300 bg-brand-deep dark:bg-transparent rounded-3xl shadow-xl dark:shadow-none">
             <div className="text-center mb-16 max-[768px]:mb-10">
                 <h2 className="text-5xl font-medium text-brand-white dark:text-white leading-tight max-[1024px]:text-[3.5rem] max-[768px]:text-[2rem] max-[480px]:text-[1.8rem] max-[768px]:mb-4 transition-colors">
-                    Your Revenue Growth <br /> Starts <span className="italic font-normal text-accent-primary">Here</span>
+                    Your Revenue Growth <br /> Starts <span className="italic font-normal bg-gradient-to-r from-[#37ABD6] to-[#0B71B3] bg-clip-text text-transparent">Here</span>
                 </h2>
             </div>
 
@@ -59,12 +59,12 @@ const FeaturesGrid = () => {
                                 }`}
                         >
                             <div className="flex justify-between items-center w-full">
-                                <h3 className={`text-xl font-semibold pr-4 ${activeFeature === index ? 'text-[#034C8C] dark:text-accent-primary' : 'text-white'}`}>
+                                <h3 className={`text-xl font-semibold pr-4 ${activeFeature === index ? 'text-[#034C8C] dark:bg-gradient-to-r dark:from-[#37ABD6] dark:to-[#0B71B3] dark:bg-clip-text dark:text-transparent' : 'text-white'}`}>
                                     {feature.title}
                                 </h3>
                                 {/* Mobile Chevron Cue */}
                                 <ChevronDown
-                                    className={`lg:hidden transition-transform duration-300 shrink-0 ${activeFeature === index ? 'rotate-180 text-accent-primary' : 'text-gray-400'}`}
+                                    className={`lg:hidden transition-transform duration-300 shrink-0 ${activeFeature === index ? 'rotate-180 text-[#37ABD6]' : 'text-gray-400'}`}
                                     size={24}
                                 />
                             </div>
@@ -84,7 +84,7 @@ const FeaturesGrid = () => {
                                             <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-6">
                                                 {feature.description}
                                             </p>
-                                            <a href="#" className="inline-flex items-center gap-2 text-accent-primary font-bold text-base hover:gap-3 transition-all">
+                                            <a href="#" className="inline-flex items-center gap-2 text-[#37ABD6] font-bold text-base hover:gap-3 transition-all">
                                                 Learn More <ArrowRight size={18} />
                                             </a>
                                         </div>
@@ -120,7 +120,7 @@ const FeaturesGrid = () => {
                             <p className="text-gray-200 dark:text-gray-300 text-lg leading-relaxed mb-8 transition-colors">
                                 {features[activeFeature].description}
                             </p>
-                            <a href="#" className="inline-flex items-center gap-2 text-accent-primary font-bold text-lg hover:gap-3 transition-all shadow-cyan- glow">
+                            <a href="#" className="inline-flex items-center gap-2 text-[#37ABD6] font-bold text-lg hover:gap-3 transition-all shadow-cyan- glow">
                                 Learn More <ArrowRight size={20} />
                             </a>
                         </motion.div>

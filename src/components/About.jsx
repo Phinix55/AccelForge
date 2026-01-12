@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useInView } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
 
-const AnimatedNumber = ({ value, duration = 1000, suffix = '' }) => {
+const AnimatedNumber = ({ value, duration = 2500, suffix = '' }) => {
     const [displayValue, setDisplayValue] = useState(0);
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-50px" });
@@ -49,7 +49,7 @@ const About = () => {
             <div className="max-w-[1200px] mx-auto mb-24 flex justify-between items-start gap-16 max-[1024px]:flex-col max-[1024px]:items-center max-[1024px]:text-center max-[1024px]:gap-8 max-[1024px]:mb-12 max-[768px]:mb-8 max-[768px]:items-center max-[768px]:text-center">
                 <div className="shrink-0">
                     <ScrollReveal>
-                        <span className="bg-accent-primary/10 text-accent-primary py-3 px-6 rounded-full font-semibold text-[0.95rem] inline-block border border-accent-primary/20">About Us</span>
+                        <span className="bg-[#37ABD6]/10 text-transparent bg-clip-text bg-gradient-to-r from-[#37ABD6] to-[#0B71B3] py-3 px-6 rounded-full font-semibold text-[0.95rem] inline-block border border-[#37ABD6]/20">About Us</span>
                     </ScrollReveal>
                 </div>
                 <div className="max-w-[800px]">
@@ -68,28 +68,28 @@ const About = () => {
 
             <div className="flex justify-between items-center max-w-[1200px] mx-auto pt-8 max-[768px]:grid max-[768px]:grid-cols-2 max-[768px]:gap-8 max-[768px]:p-0 border-t border-gray-200 dark:border-white/10 transition-colors">
                 <ScrollReveal delay={0.3} className="flex flex-col gap-2 text-center">
-                    <div className="text-[3.5rem] font-normal text-accent-primary max-[768px]:text-[2rem] drop-shadow-[0_0_10px_rgba(67,217,217,0.3)]">
+                    <div className="text-[3.5rem] font-normal bg-gradient-to-r from-[#37ABD6] to-[#0B71B3] bg-clip-text text-transparent max-[768px]:text-[2rem] drop-shadow-[0_0_10px_rgba(55,171,214,0.3)]">
                         <AnimatedNumber value={2500} suffix="+" />
                     </div>
                     <div className="text-gray-500 dark:text-gray-400 text-[1rem] max-[768px]:text-[0.9rem] transition-colors">Partners & customers</div>
                 </ScrollReveal>
                 <div className="w-px h-20 bg-gray-200 dark:bg-white/10 max-[768px]:hidden transition-colors"></div>
                 <ScrollReveal delay={0.3} className="flex flex-col gap-2 text-center">
-                    <div className="text-[3.5rem] font-normal text-accent-primary max-[768px]:text-[2rem] drop-shadow-[0_0_10px_rgba(67,217,217,0.3)]">
-                        $<AnimatedNumber value={2259.56} duration={1200} />
+                    <div className="text-[3.5rem] font-normal bg-gradient-to-r from-[#37ABD6] to-[#0B71B3] bg-clip-text text-transparent max-[768px]:text-[2rem] drop-shadow-[0_0_10px_rgba(55,171,214,0.3)]">
+                        $<AnimatedNumber value={2259.56} duration={3000} />
                     </div>
                     <div className="text-gray-500 dark:text-gray-400 text-[1rem] max-[768px]:text-[0.9rem] transition-colors">Raise Invest in 2024</div>
                 </ScrollReveal>
                 <div className="w-px h-20 bg-gray-200 dark:bg-white/10 max-[768px]:hidden transition-colors"></div>
                 <ScrollReveal delay={0.3} className="flex flex-col gap-2 text-center">
-                    <div className="text-[3.5rem] font-normal text-accent-primary max-[768px]:text-[2rem] drop-shadow-[0_0_10px_rgba(67,217,217,0.3)]">
+                    <div className="text-[3.5rem] font-normal bg-gradient-to-r from-[#37ABD6] to-[#0B71B3] bg-clip-text text-transparent max-[768px]:text-[2rem] drop-shadow-[0_0_10px_rgba(55,171,214,0.3)]">
                         <AnimatedNumber value={5.0} />
                     </div>
                     <div className="text-gray-500 dark:text-gray-400 text-[1rem] max-[768px]:text-[0.9rem] transition-colors">Custome review</div>
                 </ScrollReveal>
                 <div className="w-px h-20 bg-gray-200 dark:bg-white/10 max-[768px]:hidden transition-colors"></div>
                 <ScrollReveal delay={0.3} className="flex flex-col gap-2 text-center">
-                    <div className="text-[3.5rem] font-normal text-accent-primary max-[768px]:text-[2rem] drop-shadow-[0_0_10px_rgba(67,217,217,0.3)]">
+                    <div className="text-[3.5rem] font-normal bg-gradient-to-r from-[#37ABD6] to-[#0B71B3] bg-clip-text text-transparent max-[768px]:text-[2rem] drop-shadow-[0_0_10px_rgba(55,171,214,0.3)]">
                         <AnimatedNumber value={205} suffix="+" />
                     </div>
                     <div className="text-gray-500 dark:text-gray-400 text-[1rem] max-[768px]:text-[0.9rem] transition-colors">Produces</div>
