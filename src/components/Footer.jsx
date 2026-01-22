@@ -4,50 +4,20 @@ import logo2 from '../assets/logo2.png';
 import { useForm } from '../context/FormContext';
 
 
+import ContactForm from './ContactForm';
+
+
 const Footer = () => {
     const { isFormOpen, setIsFormOpen } = useForm();
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    useEffect(() => {
-        const handleMessage = (e) => {
-            // Check for Tally form submission event
-            if (e.data && (e.data.event === 'Tally.FormSubmitted' || e.data === 'Tally.FormSubmitted')) {
-                setIsSubmitted(true);
-                setTimeout(() => {
-                    setIsFormOpen(false);
-                    setIsSubmitted(false);
-                }, 3000);
-            }
-        };
-
-        window.addEventListener('message', handleMessage);
-        return () => window.removeEventListener('message', handleMessage);
-    }, [setIsFormOpen]);
-
-    useEffect(() => {
-        if (isFormOpen) {
-            const loadTally = () => {
-                if (typeof Tally !== 'undefined') {
-                    Tally.loadEmbeds();
-                } else {
-                    document.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((e) => {
-                        e.src = e.dataset.tallySrc;
-                    });
-                }
-            };
-
-            const scriptUrl = "https://tally.so/widgets/embed.js";
-            if (!document.querySelector(`script[src="${scriptUrl}"]`)) {
-                const script = document.createElement("script");
-                script.src = scriptUrl;
-                script.onload = loadTally;
-                script.onerror = loadTally;
-                document.body.appendChild(script);
-            } else {
-                loadTally();
-            }
-        }
-    }, [isFormOpen]);
+    const handleFormSuccess = () => {
+        setIsSubmitted(true);
+        setTimeout(() => {
+            setIsFormOpen(false);
+            setIsSubmitted(false);
+        }, 3000);
+    };
 
     return (
         <div id="register-interest">
@@ -71,38 +41,28 @@ const Footer = () => {
                             Register your interest
                         </button>
                     ) : (
-                        <div className="w-full mt-14 transition-all duration-500 ease-in-out relative">
+                        <div className="w-full mt-14 transition-all duration-500 ease-in-out relative bg-[#0D0D0D] p-8 rounded-2xl border border-white/5 shadow-2xl max-[768px]:p-6 max-[768px]:pt-12">
                             {/* Close Button */}
                             <button
                                 onClick={() => setIsFormOpen(false)}
-                                className="absolute -top-12 right-0 bg-white/10 text-white border border-white/20 p-2 rounded-full cursor-pointer hover:bg-white/20 transition-all duration-200 z-50 flex items-center justify-center opacity-80 hover:opacity-100"
+                                className="absolute top-4 right-4 bg-white/10 text-white border border-white/20 p-2 rounded-full cursor-pointer hover:bg-white/20 transition-all duration-200 z-50 flex items-center justify-center opacity-80 hover:opacity-100 max-[768px]:top-3 max-[768px]:right-3 max-[768px]:p-1.5"
                                 aria-label="Close form"
                             >
                                 <X size={20} />
                             </button>
 
                             {isSubmitted ? (
-                                <div className="flex flex-col items-center justify-center py-12 px-4 animate-fadeIn">
-                                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#37ABD6] to-[#0B71B3] flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(55,171,214,0.4)]">
-                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <div className="flex flex-col items-center justify-center py-20 px-4 animate-fadeIn text-center">
+                                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#37ABD6] to-[#0B71B3] flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(55,171,214,0.4)]">
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M20 6L9 17L4 12" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </div>
-                                    <h3 className="text-2xl font-semibold text-white mb-2">Thank You!</h3>
-                                    <p className="text-gray-400">We've received your details.</p>
+                                    <h3 className="text-3xl font-semibold text-white mb-3">Thank You!</h3>
+                                    <p className="text-gray-400 text-lg">We've received your details and will be in touch shortly.</p>
                                 </div>
                             ) : (
-                                <iframe
-                                    data-tally-src="https://tally.so/embed/9q9VL1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                                    loading="lazy"
-                                    width="100%"
-                                    height="1000"
-                                    frameBorder="0"
-                                    marginHeight="0"
-                                    marginWidth="0"
-                                    title="Let’s See If We’re a Fit"
-                                    className="w-full invert hue-rotate-180"
-                                ></iframe>
+                                <ContactForm onSuccess={handleFormSuccess} />
                             )}
                         </div>
                     )}

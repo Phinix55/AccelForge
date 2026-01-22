@@ -46,7 +46,7 @@ const FeaturesGrid = () => {
                 </h2>
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 min-h-[500px]">
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
                 {/* Left Side: Navigation List (Mobile Accordion / Desktop Tabs) */}
                 <div className="flex-1 flex flex-col gap-4">
                     {features.map((feature, index) => (
@@ -96,7 +96,7 @@ const FeaturesGrid = () => {
                 </div>
 
                 {/* Right Side: Content Display (Desktop Only) */}
-                <div className="hidden lg:flex flex-1 bg-white/10 dark:bg-white/5 rounded-2xl p-8 lg:p-12 border border-white/20 dark:border-white/10 items-center min-h-[600px] backdrop-blur-sm relative overflow-hidden shadow-xl dark:shadow-none transition-colors duration-300">
+                <div className="hidden lg:flex flex-1 bg-white/10 dark:bg-white/5 rounded-2xl p-8 lg:p-12 border border-white/20 dark:border-white/10 items-center backdrop-blur-sm relative overflow-hidden shadow-xl dark:shadow-none transition-colors duration-300">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-accent-primary/20 dark:bg-accent-primary/20 blur-[60px] rounded-full pointer-events-none"></div>
                     <AnimatePresence mode="wait">
                         <motion.div
